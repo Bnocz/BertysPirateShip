@@ -1,0 +1,87 @@
+/*-------------------------------------------------
+    Header, Nav and Footer (For all Webpages)
+---------------------------------------------------*/
+body {
+	margin: 0 auto 0 auto;
+	width: 100%; 
+} 
+header {
+	width: 100%;
+	background-color: #0092b2;
+	top: 0;
+} 
+#header_interior {
+	margin: 0 auto 0 auto; 
+	width: 95%;
+	height: 175px;
+}
+.logo {
+	width: 10%;
+	display: inline;
+	float: left;
+	clear: both;
+	margin-right: 10px;
+	margin-top: 25px;
+}
+.title {
+	overflow: auto;
+	display: inline;
+	font-size: 4vw;
+	position: relative;
+	top: 25px;
+	color: #FF7C08;
+}
+.pointer {
+	width: 20%;
+	height: 35px;
+	border: 1px solid #b22505;
+	font-size: 2vw;
+	background-color: #696969;
+	margin-top: 0px;
+	float: right;
+} 
+nav {
+	margin: 0 auto 0 auto;
+	top: 0;
+}
+#nav_interior {
+	margin: 0 auto 0 auto;
+	width: 100%;
+}
+.nav1 {
+	width: 50%;
+	float: left;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	height: 40px;
+}
+.nav2 {
+	width: 50%;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	height: 40px;
+}
+/*--------------------------------------------------
+	Homepage
+---------------------------------------------------*/
+#intro_background {
+	margin: 0 auto 0 auto;
+	width: 100%;
+	background-image: url("cookingwithleftovers.png");
+	height: 500px;
+	padding-top: 30px;
+}
+#intro {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto; 
+	text-align: center;
+	width: 50%;
+}
+#intro p{
+	color: black;
+}
+.logo_2 {
+	width: 50%
+}
