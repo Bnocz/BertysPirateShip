@@ -7,45 +7,84 @@ body {
 } 
 header {
 	width: 100%;
-	background-color: #0092b2;
+	background-color: #0Ce587;
 	top: 0;
+	border-top: 20px solid #018D01;
 } 
 #header_interior {
 	margin: 0 auto 0 auto; 
 	width: 95%;
-	height: 175px;
 }
 .logo {
-	width: 10%;
-	display: inline;
+	width: 15%;
+	min-width: 110px;
+	min-height: 110px;
 	float: left;
 	clear: both;
-	margin-right: 10px;
-	margin-top: 25px;
+}
+.logo_center {
+	display: none;
 }
 .title {
+	font-family: 'Exo', sans-serif;
+	font-size: 3.4vw;
+	min-width: 110px;
+	min-height: 110px;
 	overflow: auto;
 	display: inline;
-	font-size: 4vw;
 	position: relative;
-	top: 25px;
-	color: #FF7C08;
+	top: 20px;
+	right: 5px;
+	color: #A74A01;
+} 
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	.logo {
+		display: none;
+	}
+	.logo_center {
+		display: block;
+		margin: 0 auto 0 auto;
+		width: 20%;
+		min-width: 110px;
+		min-height: 110px;
+	}
+	.title {
+		display: none;
+	}
 }
 .pointer {
-	width: 20%;
-	height: 35px;
-	border: 1px solid #b22505;
-	font-size: 2vw;
-	background-color: #696969;
-	margin-top: 0px;
+	width: 30%;
+	min-height: 50px;
+	border: 1px solid #0Ce587;
+	font-size: 24px;
+	background-color: #0Ce587;
 	float: right;
+	color: white;
 } 
+@media only screen and (min-width: 621px) and (max-width:1000px) {
+	.pointer {
+		min-height: 35px;
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	.pointer {
+		width: 100%;
+		min-height: 35px;
+		font-size: 16px;
+		margin-bottom: 2.5px;
+		margin-top: 2.5px;
+	}
+}
 nav {
 	margin: 0 auto 0 auto;
 	top: 0;
 }
 #nav_interior {
 	margin: 0 auto 0 auto;
+	width: 100%;
+}
+.navbar {
 	width: 100%;
 }
 .nav1 {
