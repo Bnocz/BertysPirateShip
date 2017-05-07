@@ -1,0 +1,119 @@
+/*-------------------------------------------------
+    Header, Nav and Footer (For all Webpages)
+---------------------------------------------------*/
+body {
+	margin: 0 auto 0 auto;
+	width: 100%; 
+} 
+header {
+	width: 100%;
+	background-color: #0Ce587;
+	top: 0;
+	border-top: 20px solid #018D01;
+} 
+#header_interior {
+	margin: 0 auto 0 auto; 
+	width: 95%;
+}
+.logo {
+	width: 15%;
+	min-width: 110px;
+	min-height: 110px;
+	float: left;
+	clear: both;
+}
+.logo_center {
+	display: none;
+}
+.title {
+	font-family: 'Exo', sans-serif;
+	font-size: 3.4vw;
+	min-width: 110px;
+	min-height: 110px;
+	overflow: auto;
+	display: inline;
+	position: relative;
+	top: 20px;
+	right: 5px;
+	color: #A74A01;
+} 
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	.logo {
+		display: none;
+	}
+	.logo_center {
+		display: block;
+		margin: 0 auto 0 auto;
+		width: 25%;
+		min-width: 110px;
+		min-height: 110px;
+	}
+	.title {
+		display: none;
+	}
+}
+.pointer {
+	width: 30%;
+	min-height: 50px;
+	border: 1px solid #0Ce587;
+	font-size: 24px;
+	background-color: #0Ce587;
+	float: right;
+	color: white;
+} 
+@media only screen and (min-width: 621px) and (max-width:1000px) {
+	.pointer {
+		min-height: 35px;
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	.pointer {
+		display: none;
+	}
+}
+nav {
+	margin: 0 auto 0 auto;
+	top: 0;
+}
+#nav_interior {
+	margin: 0 auto 0 auto;
+	width: 100%;
+}
+.nav_reborn {
+	list-style: none;
+	text-decoration: none;
+}
+.nav1 {
+	width: 50%;
+	float: left;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	height: 40px;
+}
+.nav2 {
+	width: 50%;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	height: 40px;
+}
+/*--------------------------------------------------
+	Homepage
+---------------------------------------------------*/
+#intro_background {
+
+}
+#intro {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto; 
+	text-align: center;
+	width: 50%;
+}
+#intro p{
+	color: black;
+}
+.logo_2 {
+	width: 50%
+}
