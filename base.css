@@ -1,6 +1,10 @@
 /*-------------------------------------------------
     Header, Nav and Footer (For all Webpages)
 ---------------------------------------------------*/
+@font-face {
+	font-family: 'Eyes';
+	src: url(Fonts/Eyes.ttf);
+}
 body {
 	margin: 0 auto 0 auto;
 	width: 100%; 
@@ -21,12 +25,14 @@ header {
 	min-height: 110px;
 	float: left;
 	clear: both;
+	
 }
 .logo_center {
 	display: none;
 }
 .title {
-	font-family: 'Exo', sans-serif;
+	font-family: 'Eyes', 'Exo', sans-serif;
+	src: url(Fonts/Eyes.ttf);
 	font-size: 3.4vw;
 	min-width: 110px;
 	min-height: 110px;
