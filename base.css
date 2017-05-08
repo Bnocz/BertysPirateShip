@@ -9,7 +9,7 @@ header {
 	width: 100%;
 	background-color: #2DD9FF;
 	top: 0;
-	border-top: 20px solid #0092b2;
+	border-top: 10px solid #0092b2;
 } 
 #header_interior {
 	margin: 0 auto 0 auto; 
@@ -74,15 +74,13 @@ header {
 }
 nav {
 	margin: 0 auto 0 auto;
-	top: 0;
+	background-color: #71E1F9;
+	width: 100%;
 }
 #nav_interior {
 	margin: 0 auto 0 auto;
-	width: 100%;
-}
-.nav_reborn {
-	list-style: none;
-	text-decoration: none;
+	width: 80%;
+	background-color: #71E1F9;
 }
 .nav1 {
 	width: 50%;
@@ -112,8 +110,9 @@ nav {
 }
 .welcome {
 	font-size: 50px;
-	margin-top: 30px;
-	margin-bottom: 45px;
+	position: relative;
+	top: 25px;
+	margin-bottom: 50px;
 }
 #introcontent {
 	width: 80%;
