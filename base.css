@@ -99,8 +99,8 @@ nav {
 /*--------------------------------------------------
 	Homepage
 ---------------------------------------------------*/
-#intro_background {
-
+main {
+	text-align: center;
 }
 #intro p{
 	color: black;
@@ -110,8 +110,7 @@ nav {
 }
 .welcome {
 	font-size: 50px;
-	position: relative;
-	top: 25px;
+	margin-top: 30px;
 	margin-bottom: 50px;
 }
 #introcontent {
@@ -126,6 +125,13 @@ nav {
 	position: relative; 
 	left: 50px;
 	font-size: 16px;
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	#intro {
+		float: none;
+		margin: 0 auto 0 auto;
+		position: static;
+	}
 }
 #homepagebuttons {
 	width: 20%;
@@ -186,11 +192,30 @@ nav {
 .logonbutton:hover, .signupbutton:hover, .contributors:hover, .affilatedapps:hover {
 	opacity: 0.8;
 }
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	#homepagebuttons {
+		width: 100%;
+		margin-left: 0;
+		height: 175px;
+	}
+	.logonbutton, .contributors {
+		float: left;
+	}
+	.signupbutton, .affilatedapps {
+		float: right;
+	}
+	.logonbutton, .signupbutton, .contributors, .affilatedapps {
+		width: 45%;
+	}
+}
 .recipelink {
 	text-decoration: none;
 	text-align: center;
 	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
 	font-size: 16px;
+	display: inline-block;
 }
 .featuredtitle {
 	text-align: center;
