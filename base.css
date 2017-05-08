@@ -82,19 +82,35 @@ nav {
 	width: 80%;
 	background-color: #71E1F9;
 }
-.nav1 {
-	width: 50%;
-	float: left;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	border-left: 1px solid black;
-	height: 40px;
+.mobile-nav {
+	text-decoration: none;
+	list-style: none;
+	padding-left: 0;
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	z-index: 1;
 }
-.nav2 {
-	width: 50%;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	height: 40px;
+.mobile-nav-button {
+	width: 25%;
+	float: left;
+	height: 50px;
+	margin-top: 0;
+	z-index: 1;
+}
+@media only screen and (min-width: 1px) and (max-width:620px) {
+	#nav_interior {
+		width: 100%;
+	}
+	.nav-bar, .nav {
+		display: none;
+	}
+	.mobile-nav {
+		display: block;
+	}
 }
 /*--------------------------------------------------
 	Homepage
@@ -152,6 +168,7 @@ main {
 	border-radius: 5px;
 	background-color: yellow;
 	color: white;
+	z-index: -1;
 }
 .signupbutton {
 	width: 100%;
@@ -164,6 +181,7 @@ main {
 	border-radius: 5px;
 	background-color: red;
 	color: white;
+	z-index: -1;
 }
 .contributors {
 	width: 100%;
@@ -176,6 +194,7 @@ main {
 	border-radius: 5px;
 	background-color: purple;
 	color: white;
+	z-index: -1;
 }
 .affilatedapps {
 	width: 100%;
@@ -188,6 +207,7 @@ main {
 	border-radius: 5px;
 	background-color: blue;
 	color: white;
+	z-index: -1;
 }
 .logonbutton:hover, .signupbutton:hover, .contributors:hover, .affilatedapps:hover {
 	opacity: 0.8;
