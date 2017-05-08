@@ -7,9 +7,9 @@ body {
 } 
 header {
 	width: 100%;
-	background-color: #0Ce587;
+	background-color: #2DD9FF;
 	top: 0;
-	border-top: 20px solid #018D01;
+	border-top: 10px solid #0092b2;
 } 
 #header_interior {
 	margin: 0 auto 0 auto; 
@@ -35,9 +35,9 @@ header {
 	position: relative;
 	top: 20px;
 	right: 5px;
-	color: #A74A01;
+	color: #FF7C08;
 } 
-@media only screen and (min-width: 300px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width:620px) {
 	.logo {
 		display: none;
 	}
@@ -55,9 +55,9 @@ header {
 .pointer {
 	width: 30%;
 	min-height: 50px;
-	border: 1px solid #0Ce587;
+	border: 1px solid #2DD9FF;
 	font-size: 24px;
-	background-color: #0Ce587;
+	background-color: #2DD9FF;
 	float: right;
 	color: white;
 } 
@@ -67,22 +67,20 @@ header {
 		font-size: 20px;
 	}
 }
-@media only screen and (min-width: 300px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width:620px) {
 	.pointer {
 		display: none;
 	}
 }
 nav {
 	margin: 0 auto 0 auto;
-	top: 0;
+	background-color: #71E1F9;
+	width: 100%;
 }
 #nav_interior {
 	margin: 0 auto 0 auto;
-	width: 100%;
-}
-.nav_reborn {
-	list-style: none;
-	text-decoration: none;
+	width: 80%;
+	background-color: #71E1F9;
 }
 .nav1 {
 	width: 50%;
@@ -101,19 +99,124 @@ nav {
 /*--------------------------------------------------
 	Homepage
 ---------------------------------------------------*/
-#intro_background {
-
-}
-#intro {
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: auto; 
+main {
 	text-align: center;
-	width: 50%;
 }
 #intro p{
 	color: black;
 }
-.logo_2 {
-	width: 50%
+#titlehomepage {
+	text-align: center;
+}
+.welcome {
+	font-size: 50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+#introcontent {
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+#intro {
+	width: 60%;
+	float: left;
+	text-align: center;
+	clear: both;
+	position: relative; 
+	left: 50px;
+	font-size: 16px;
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	#intro {
+		float: none;
+		margin: 0 auto 0 auto;
+		position: static;
+	}
+}
+#homepagebuttons {
+	width: 20%;
+	margin-left: 80%;
+	display: block;
+	height: 375px;
+	position: relative; 
+	top: 15px;
+}
+.logonbutton {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid yellow;
+	border-radius: 5px;
+	background-color: yellow;
+	color: white;
+}
+.signupbutton {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid red;
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+}
+.contributors {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid purple;
+	border-radius: 5px;
+	background-color: purple;
+	color: white;
+}
+.affilatedapps {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid blue;
+	border-radius: 5px;
+	background-color: blue;
+	color: white;
+}
+.logonbutton:hover, .signupbutton:hover, .contributors:hover, .affilatedapps:hover {
+	opacity: 0.8;
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	#homepagebuttons {
+		width: 100%;
+		margin-left: 0;
+		height: 175px;
+	}
+	.logonbutton, .contributors {
+		float: left;
+	}
+	.signupbutton, .affilatedapps {
+		float: right;
+	}
+	.logonbutton, .signupbutton, .contributors, .affilatedapps {
+		width: 45%;
+	}
+}
+.recipelink {
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 16px;
+	display: inline-block;
+}
+.featuredtitle {
+	text-align: center;
 }
