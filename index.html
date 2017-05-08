@@ -8,8 +8,8 @@
     <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
 	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
-	<script href="Javascript/jquery-3.2.1.js" rel="text/javascript"></script>
-	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" rel="text/javascript"></script>
+	<script href="Javascript/jquery-3.2.1.js"></script>
+	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 <header>
@@ -23,20 +23,20 @@
 	<div>
 </header>
 <nav class="navbar">
-	<div id="nav">
-		<!--<div id="nav_interior">		
+	<div>
+		<div id="nav_interior">		
 			<ul class="navbar-nav nav">
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="#">Recipes</a></li>
 				<li><a href="#">Weekly Report</a></li>
 				<li><a href="#">Partners</a></li>
 			</ul>	
-		</div>-->
-		<div data-role="navbar">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Recipes</a></li>
-			<li><a href="#">Weekly Report</a></li>
-			<li><a href="#">Partners</a></li>
+			<ul class="mobile-nav">
+				<li class="active"><button class="mobile-nav-button">Home</button></li>
+				<li><button class="mobile-nav-button">Recipes</button></li>
+				<li><button class="mobile-nav-button">Weekly Report</button></li>
+				<li><button class="mobile-nav-button">Profile</button></li>
+			</ul>
 		</div>
 	</div>
 </nav>
