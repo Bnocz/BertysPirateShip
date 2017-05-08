@@ -1,0 +1,222 @@
+/*-------------------------------------------------
+    Header, Nav and Footer (For all Webpages)
+---------------------------------------------------*/
+body {
+	margin: 0 auto 0 auto;
+	width: 100%; 
+} 
+header {
+	width: 100%;
+	background-color: #2DD9FF;
+	top: 0;
+	border-top: 10px solid #0092b2;
+} 
+#header_interior {
+	margin: 0 auto 0 auto; 
+	width: 95%;
+}
+.logo {
+	width: 15%;
+	min-width: 110px;
+	min-height: 110px;
+	float: left;
+	clear: both;
+}
+.logo_center {
+	display: none;
+}
+.title {
+	font-family: 'Exo', sans-serif;
+	font-size: 3.4vw;
+	min-width: 110px;
+	min-height: 110px;
+	overflow: auto;
+	display: inline;
+	position: relative;
+	top: 20px;
+	right: 5px;
+	color: #FF7C08;
+} 
+@media only screen and (min-width: 1px) and (max-width:620px) {
+	.logo {
+		display: none;
+	}
+	.logo_center {
+		display: block;
+		margin: 0 auto 0 auto;
+		width: 25%;
+		min-width: 110px;
+		min-height: 110px;
+	}
+	.title {
+		display: none;
+	}
+}
+.pointer {
+	width: 30%;
+	min-height: 50px;
+	border: 1px solid #2DD9FF;
+	font-size: 24px;
+	background-color: #2DD9FF;
+	float: right;
+	color: white;
+} 
+@media only screen and (min-width: 621px) and (max-width:1000px) {
+	.pointer {
+		min-height: 35px;
+		font-size: 20px;
+	}
+}
+@media only screen and (min-width: 1px) and (max-width:620px) {
+	.pointer {
+		display: none;
+	}
+}
+nav {
+	margin: 0 auto 0 auto;
+	background-color: #71E1F9;
+	width: 100%;
+}
+#nav_interior {
+	margin: 0 auto 0 auto;
+	width: 80%;
+	background-color: #71E1F9;
+}
+.nav1 {
+	width: 50%;
+	float: left;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	height: 40px;
+}
+.nav2 {
+	width: 50%;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	height: 40px;
+}
+/*--------------------------------------------------
+	Homepage
+---------------------------------------------------*/
+main {
+	text-align: center;
+}
+#intro p{
+	color: black;
+}
+#titlehomepage {
+	text-align: center;
+}
+.welcome {
+	font-size: 50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+#introcontent {
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+#intro {
+	width: 60%;
+	float: left;
+	text-align: center;
+	clear: both;
+	position: relative; 
+	left: 50px;
+	font-size: 16px;
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	#intro {
+		float: none;
+		margin: 0 auto 0 auto;
+		position: static;
+	}
+}
+#homepagebuttons {
+	width: 20%;
+	margin-left: 80%;
+	display: block;
+	height: 375px;
+	position: relative; 
+	top: 15px;
+}
+.logonbutton {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid yellow;
+	border-radius: 5px;
+	background-color: yellow;
+	color: white;
+}
+.signupbutton {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid red;
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+}
+.contributors {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid purple;
+	border-radius: 5px;
+	background-color: purple;
+	color: white;
+}
+.affilatedapps {
+	width: 100%;
+	height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid blue;
+	border-radius: 5px;
+	background-color: blue;
+	color: white;
+}
+.logonbutton:hover, .signupbutton:hover, .contributors:hover, .affilatedapps:hover {
+	opacity: 0.8;
+}
+@media only screen and (min-width: 300px) and (max-width:620px) {
+	#homepagebuttons {
+		width: 100%;
+		margin-left: 0;
+		height: 175px;
+	}
+	.logonbutton, .contributors {
+		float: left;
+	}
+	.signupbutton, .affilatedapps {
+		float: right;
+	}
+	.logonbutton, .signupbutton, .contributors, .affilatedapps {
+		width: 45%;
+	}
+}
+.recipelink {
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 16px;
+	display: inline-block;
+}
+.featuredtitle {
+	text-align: center;
+}
