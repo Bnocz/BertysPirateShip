@@ -1,6 +1,10 @@
 /*-------------------------------------------------
     Header, Nav and Footer (For all Webpages)
 ---------------------------------------------------*/
+@font-face {
+	font-family: 'Eyes';
+	src: url(Fonts/Eyes.ttf);
+}
 body {
 	margin: 0 auto 0 auto;
 	width: 100%; 
@@ -21,12 +25,14 @@ header {
 	min-height: 110px;
 	float: left;
 	clear: both;
+	
 }
 .logo_center {
 	display: none;
 }
 .title {
-	font-family: 'Exo', sans-serif;
+	font-family: 'Eyes', 'Exo', sans-serif;
+	src: url(Fonts/Eyes.ttf);
 	font-size: 3.4vw;
 	min-width: 110px;
 	min-height: 110px;
@@ -37,7 +43,7 @@ header {
 	right: 5px;
 	color: #FF7C08;
 } 
-@media only screen and (min-width: 1px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width: 621px) {
 	.logo {
 		display: none;
 	}
@@ -50,6 +56,9 @@ header {
 	}
 	.title {
 		display: none;
+	}
+	header {
+		border-top: 0px solid black;
 	}
 }
 .pointer {
@@ -67,7 +76,7 @@ header {
 		font-size: 20px;
 	}
 }
-@media only screen and (min-width: 1px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width:621px) {
 	.pointer {
 		display: none;
 	}
@@ -82,19 +91,66 @@ nav {
 	width: 80%;
 	background-color: #71E1F9;
 }
-.nav1 {
-	width: 50%;
-	float: left;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	border-left: 1px solid black;
-	height: 40px;
+.mobile-nav {
+	text-decoration: none;
+	list-style: none;
+	padding-left: 0;
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	z-index: 1;
 }
-.nav2 {
-	width: 50%;
-	border-right: 1px solid black;
-	border-bottom: 1px solid black;
-	height: 40px;
+.nav-home {
+	padding-left: 0;
+	width: 100%;
+}
+.nav-button {
+	background-color: transparent;
+	border-color: transparent;
+	width: 100%;
+	height: 100px;
+	color: white;
+}
+.row {
+	margin-right: 15px;
+}
+.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
+	display: none;
+}
+@media only screen and (min-width: 1px) and (max-width:779px) {
+	#nav_interior {
+		display: none;
+		background-color: #0092b2;
+	}
+	.navbar-nav, .nav {
+		display: none;
+	}
+	.navbar {
+		position: relative;
+		min-height: 100px;
+		margin-bottom: 20px;
+		border: 1px solid transparent;
+	}
+	.nav-button {
+		background-color: transparent;
+		border-color: transparent;
+		width: 100%;
+		height: 75px;
+		color: white;
+		font-size: 0px;
+	}
+	.glyphicon {
+		font-size: 20px;
+	}
+	.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
+		display: block;
+	}
+	header {
+		border-top: 5px solid #0092b2;
+	}
 }
 /*--------------------------------------------------
 	Homepage
@@ -126,7 +182,7 @@ main {
 	left: 50px;
 	font-size: 16px;
 }
-@media only screen and (min-width: 300px) and (max-width:620px) {
+@media only screen and (min-width: 300px) and (max-width:620px){
 	#intro {
 		float: none;
 		margin: 0 auto 0 auto;
@@ -219,4 +275,116 @@ main {
 }
 .featuredtitle {
 	text-align: center;
+}
+/*--------------------------------------------------
+	Directory Page
+---------------------------------------------------*/
+
+.dropbtn {
+    background-color: #2DD9FF;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	width: 200px;
+	float: left;
+	position: fixed;
+	left: 0;
+	top: 235px;
+}
+
+@media only screen and (min-width: 300px) and (max-width:620px) { 
+.dropbtn {
+	top: 173px;
+	display: inline-block;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #bbfffc;
+	
+}
+
+.dropdown {
+    position: fixed;
+    display: inline-block;
+	float: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+	top: 228px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+}
+
+.dropdown-content {
+	position: fixed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+	left: 0;
+	top: 280px;
+	display: inline-block;
+}
+
+li{
+    display: block;
+    color: #000;
+}
+img {
+	height: 100%;
+	width: 100%;
+}
+.recipe {
+	display: inline-block
+}
+
+#food {
+	height: 250px;
+	width: 250px;
+}
+.nameRecipe {
+	font-size: 1.2em;
+}
+.recipe {
+	border: 1px solid black;
+	margin: 0px;
+	display: inline-block;
+}
+a .recipe {
+	text-decoration: none;
+}
+.recipe a:hover {
+	text-decoration:none;
+	color: red;
+}
+img.star {
+	height: 10px;
+	width: 10px;
 }
