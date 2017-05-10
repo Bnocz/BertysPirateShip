@@ -1,6 +1,10 @@
 /*-------------------------------------------------
     Header, Nav and Footer (For all Webpages)
 ---------------------------------------------------*/
+@font-face {
+	font-family: 'Eyes';
+	src: url(Fonts/Eyes.ttf);
+}
 body {
 	margin: 0 auto 0 auto;
 	width: 100%; 
@@ -21,12 +25,14 @@ header {
 	min-height: 110px;
 	float: left;
 	clear: both;
+	
 }
 .logo_center {
 	display: none;
 }
 .title {
-	font-family: 'Exo', sans-serif;
+	font-family: 'Eyes', 'Exo', sans-serif;
+	src: url(Fonts/Eyes.ttf);
 	font-size: 3.4vw;
 	min-width: 110px;
 	min-height: 110px;
@@ -37,7 +43,7 @@ header {
 	right: 5px;
 	color: #FF7C08;
 } 
-@media only screen and (min-width: 1px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width: 621px) {
 	.logo {
 		display: none;
 	}
@@ -50,6 +56,9 @@ header {
 	}
 	.title {
 		display: none;
+	}
+	header {
+		border-top: 0px solid black;
 	}
 }
 .pointer {
@@ -67,7 +76,7 @@ header {
 		font-size: 20px;
 	}
 }
-@media only screen and (min-width: 1px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width:621px) {
 	.pointer {
 		display: none;
 	}
@@ -94,26 +103,30 @@ nav {
 	margin-bottom: 0px;
 	z-index: 1;
 }
-.mobile-nav-button {
-	width: 25%;
-	float: left;
-	height: 50px;
-	margin-top: 0;
-	z-index: 1;
-	font-size: 12px;
-	padding-top: 20px;
+.nav-home {
+	padding-left: 0;
+	width: 100%;
 }
-@media only screen and (min-width: 1px) and (max-width:620px) {
+.nav-button {
+	background-color: transparent;
+	border-color: transparent;
+	width: 100%;
+	height: 100px;
+	color: white;
+}
+.row {
+	margin-right: 15px;
+}
+.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
+	display: none;
+}
+@media only screen and (min-width: 1px) and (max-width:779px) {
 	#nav_interior {
-		width: 100%;
-		height: 25px;
+		display: none;
+		background-color: #0092b2;
 	}
 	.navbar-nav, .nav {
 		display: none;
-		background-color: white;
-	}
-	.mobile-nav {
-		display: block;
 	}
 	.navbar {
 		position: relative;
@@ -121,11 +134,28 @@ nav {
 		margin-bottom: 20px;
 		border: 1px solid transparent;
 	}
+	.nav-button {
+		background-color: transparent;
+		border-color: transparent;
+		width: 100%;
+		height: 75px;
+		color: white;
+		font-size: 0px;
+	}
+	.glyphicon {
+		font-size: 20px;
+	}
+	.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
+		display: block;
+	}
+	header {
+		border-top: 5px solid #0092b2;
+	}
 }
 /*--------------------------------------------------
 	Homepage
 ---------------------------------------------------*/
-main {
+#center-index {
 	text-align: center;
 }
 #intro p{
@@ -152,7 +182,7 @@ main {
 	left: 50px;
 	font-size: 16px;
 }
-@media only screen and (min-width: 300px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width:669px) {
 	#intro {
 		float: none;
 		margin: 0 auto 0 auto;
@@ -163,8 +193,9 @@ main {
 		margin-top: 15px;
 		margin-bottom: 15px;
 	}
-	#intro p{
-		font-size: 12px;
+	#intro {
+		font-size: 13px;
+		width: 90%; 
 	}
 }
 #homepagebuttons {
@@ -230,7 +261,7 @@ main {
 .logonbutton:hover, .signupbutton:hover, .contributors:hover, .affilatedapps:hover {
 	opacity: 0.8;
 }
-@media only screen and (min-width: 300px) and (max-width:620px) {
+@media only screen and (min-width: 1px) and (max-width:669px) {
 	#homepagebuttons {
 		width: 100%;
 		margin-left: 0;
@@ -255,6 +286,48 @@ main {
 	font-size: 16px;
 	display: inline-block;
 }
+@media only screen and (min-width: 670px) and (max-width:2000px) {
+	.recipelink {
+		margin-top: 5px;
+	}
+}
 .featuredtitle {
 	text-align: center;
+}
+/*--------------------------------------------------
+	Directory
+---------------------------------------------------*/
+#directoryfilter {
+	width: 25%;
+	position: fixed;
+}
+#recipesdirectory {
+	width: 75%;
+	float: right;
+}
+#filterbackground {
+	background-color: #2DD9FF;
+	width: 100%;
+}
+#filtertitle {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+.filterbutton {
+	width: 100%;
+	height: 60px;
+}
+.recipe-image-3 {
+	width: 45%;
+
+}
+.recipe-image-text {
+	position: relative;
+}
+.bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
 }
