@@ -155,7 +155,7 @@ nav {
 /*--------------------------------------------------
 	Homepage
 ---------------------------------------------------*/
-main {
+#center-index {
 	text-align: center;
 }
 #intro p{
@@ -182,7 +182,7 @@ main {
 	left: 50px;
 	font-size: 16px;
 }
-@media only screen and (min-width: 300px) and (max-width:669px) {
+@media only screen and (min-width: 1px) and (max-width:669px) {
 	#intro {
 		float: none;
 		margin: 0 auto 0 auto;
@@ -193,8 +193,9 @@ main {
 		margin-top: 15px;
 		margin-bottom: 15px;
 	}
-	#intro p{
-		font-size: 12px;
+	#intro {
+		font-size: 13px;
+		width: 90%; 
 	}
 }
 #homepagebuttons {
@@ -260,7 +261,7 @@ main {
 .logonbutton:hover, .signupbutton:hover, .contributors:hover, .affilatedapps:hover {
 	opacity: 0.8;
 }
-@media only screen and (min-width: 300px) and (max-width:669px) {
+@media only screen and (min-width: 1px) and (max-width:669px) {
 	#homepagebuttons {
 		width: 100%;
 		margin-left: 0;
@@ -285,6 +286,48 @@ main {
 	font-size: 16px;
 	display: inline-block;
 }
+@media only screen and (min-width: 670px) and (max-width:2000px) {
+	.recipelink {
+		margin-top: 5px;
+	}
+}
 .featuredtitle {
 	text-align: center;
+}
+/*--------------------------------------------------
+	Directory
+---------------------------------------------------*/
+#directoryfilter {
+	width: 25%;
+	position: fixed;
+}
+#recipesdirectory {
+	width: 75%;
+	float: right;
+}
+#filterbackground {
+	background-color: #2DD9FF;
+	width: 100%;
+}
+#filtertitle {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+.filterbutton {
+	width: 100%;
+	height: 60px;
+}
+.recipe-image-3 {
+	width: 45%;
+
+}
+.recipe-image-text {
+	position: relative;
+}
+.bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
 }
