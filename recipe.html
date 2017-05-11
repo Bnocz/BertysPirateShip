@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Putting the fresh in refresh</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=divice-width, initial-scale=1">
+    
+	<link href="recipe.css" rel="stylesheet">
+	<link href="base.css" rel="stylesheet" />
+    
+	<link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
+	<script href="Javascript/jquery-3.2.1.js"></script>
+	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<header>
+	<div class="container">
+		<div id="header_interior">
+			<img class="logo" src="logo.png" alt="Phoenix Recipes">
+			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+			<img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<a onclick=""><button type="button" class=".btn-link pointer">Sign Up/Log in</button></a>
+		</div>
+	<div>
+</header>
+<nav class="navbar">
+	<div>
+		<div id="nav_interior">		
+			<ul class="navbar-nav nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Recipes</a></li>
+				<li><a href="#">Weekly Report</a></li>
+				<li><a href="#">Partners</a></li>
+			</ul>	
+			<ul class="mobile-nav">
+				<li class="active"><button class="mobile-nav-button">Home</button></li>
+				<li><button class="mobile-nav-button">Recipes</button></li>
+				<li><button class="mobile-nav-button">Weekly Report</button></li>
+				<li><button class="mobile-nav-button">Profile</button></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<main>
+<div class="container">
+	<div id="titlehomepage">
+		<h1 class="welcome" id="nameRecipe">Name of Recipe Here</h1>
+	</div>
+	
+	<div id="imagesdiv">
+	<div id="column1">
+	
+	<img width="30" src="left.png">
+	
+	</div>
+	
+	<div id="column2outer">
+		<div id="column2mid">
+			
+			<img width="500" src="turkey.png">
+			
+		</div>
+	
+		<div id="column2side">
+			
+			<img width="30" src="right.png">
+			
+		</div>
+	</div>
+	</div>
+
+	<div id="centerlist">
+	<h3>Ingredients</h3>
+		<!--PLACEHOLDER LIST
+		Needs to be replaced with recipe lists from a database
+		-->
+		<div>
+		<ul>
+			<li>Turkey</li>
+			<li>Mashed Taters</li>
+			<li>Cranberry SAAAAAAAAUCE</li>
+		</ul>
+		</div>
+	
+	<div>
+	<h3 id="instructions">Instructions</h3>
+		<div>
+		<ol>
+			<li>Take the turkey</li>
+			<li>Add the taters</li>
+			<li>Liberally douse in cranberry SAAAAAAAAUCE</li>
+		</ol>
+		</div>
+	</div>
+	<p>Comments</p>
+	
+	</div>	
+		
+</div>
+
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
+    authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
+    databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
+    projectId: "phoenix-recipes-98a1a",
+    storageBucket: "phoenix-recipes-98a1a.appspot.com",
+    messagingSenderId: "925704811865"
+  };
+  firebase.initializeApp(config);
+  
+  var recipeImage = document.getElementById('recipeImage');
+  var ingredients = document.getElementById('ingredients');
+  var instructions = document.getElementById('instructions');
+  var nameRecipe = document.getElementById('nameRecipe');
+    
+  var dbRef = firebase.database().ref().child('ingredientsDB');
+  dbRef.on('value', snap => ingredients.innerText = snap.val());
+  var dbRef = firebase.database().ref().child('nameRecipeDB');
+  dbRef.on('value', snap => nameRecipe.innerText = snap.val());
+  
+  
+</script>
+</body>
+</html>

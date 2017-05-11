@@ -1,0 +1,42 @@
+.container #column1 {
+	width: 25%;
+	float: left;
+	border: 1px solid black;
+ }
+ .container #column2outer {
+	width: 75%;
+	float: right;
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+ }
+ #column2outer #column2mid {
+	width: 60%;
+	float: left;
+	border: 1px solid black;
+ }
+ #column2outer #column2side {
+	width: 4%;
+	float: right;
+	border: 1px solid black;
+ }
+ #column2mid {
+	 text-align: center;
+	 border: 1px solid black;
+ }
+ #list {
+	 float: center;
+	 text-align: center;
+	 display: inline-block;
+	 border: 1px solid black;
+	 
+ }
+ #centerlist {
+	 width: 100%;
+	 border: 1px solid black;
+ }
+ #imagesdiv {
+	 width: 100%;
+	 height: 370px;
+	 border: 1px solid black;
+ }
