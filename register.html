@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-signin-client_id" content="925704811865-rbfrn6qbg4pd2ggpufek418i15eh9036.apps.googleusercontent.com">
+    <link href="base.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
+	<script href="Javascript/jquery-3.2.1.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<header>
+	<div class="container">
+		<div id="header_interior">
+			<img class="logo" src="logo.png" alt="Phoenix Recipes">
+			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+			<img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<a onclick=""><button type="button" class=".btn-link pointer">Sign Up/Log in</button></a>
+		</div>
+	<div>
+</header>
+<nav class="navbar">
+	<div>
+		<div id="nav_interior">		
+			<ul class="navbar-nav nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Recipes</a></li>
+				<li><a href="#">Weekly Report</a></li>
+				<li><a href="#">Partners</a></li>
+			</ul>	
+		</div>
+	</div>
+</nav>
+<main>
+	<div class="container">
+		<div>
+			<h1 class="">Registration</h1>
+		</div>
+		<div>
+			<h3 class="didyouknow">DID YOU KNOW?</h3>
+			<p class="register-para">God is dead</p>
+		</div>
+		<div id="signupbuttons">
+			<div id="my-signin2"></div>
+			<script>
+			function onSuccess(googleUser) {
+				console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+			}
+			function onFailure(error) {
+				console.log(error);
+			}
+			function renderButton() {
+				gapi.signin2.render('my-signin2', {
+					'scope': 'profile email',
+					'width': 240,
+					'height': 50,
+					'longtitle': true,
+					'theme': 'dark',
+					'onsuccess': onSuccess,
+					'onfailure': onFailure
+				});
+			}
+			</script>
+
+			<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+		</div>
+		<button style="background-image: url('logo.png')"></button>
+	</div>
+</main>
+<footer>
+	<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+	 <div class="row" id="bottomNav">
+		<div class="col-xs-3 text-center nav-home"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></div>
+	</div>
+  </div>
+</footer>
