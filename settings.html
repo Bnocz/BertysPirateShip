@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Settings</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="base.css" rel="stylesheet" />
+    <link href="Style/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>    
+$(document).ready(function(){
+ 	$(".recentrecipes").hide();
+	$(".needhelp").hide();
+	$("#burritobutton4").hide();
+if ($(window).width() < 960) {
+	$(".recentrecipes").hide();
+	$(".searchsettings").hide();
+	$(".needhelp").hide();
+	$("#burritobutton4").hide();
+		$("#burritobutton1").click(function(){
+			$("#burritobutton1").hide();
+			$("#burritobutton2").hide();
+			$("#burritobutton3").hide();
+			$(".searchsettings").show();
+			$(".recentrecipes").hide();
+			$(".needhelp").hide();
+			$("#burritobutton4").show();
+			$("#burritobutton4").click(function(){
+				$(".recentrecipes").hide();
+				$(".searchsettings").hide();
+				$(".needhelp").hide();
+				$(".burritobutton4").hide();
+				$("#burritobutton1").show();
+				$("#burritobutton2").show();
+				$("#burritobutton3").show();
+				});
+			
+		});
+		$("#burritobutton2").click(function(){
+			$("#burritobutton1").hide();
+			$("#burritobutton2").hide();
+			$("#burritobutton3").hide();
+			$(".searchsettings").hide();
+			$(".recentrecipes").show();
+			$(".needhelp").hide();
+			$("#burritobutton4").show();
+			$("#burritobutton4").click(function(){
+				$(".recentrecipes").hide();
+				$(".searchsettings").hide();
+				$(".needhelp").hide();
+				$(".burritobutton4").hide();
+				$("#burritobutton1").show();
+				$("#burritobutton2").show();
+				$("#burritobutton3").show();
+				});
+		});
+		$("#burritobutton3").click(function(){
+			$("#burritobutton1").hide();
+			$("#burritobutton2").hide();
+			$("#burritobutton3").hide();
+			$(".searchsettings").hide();
+			$(".recentrecipes").hide();
+			$(".needhelp").show();
+			$("#burritobutton4").show();
+			$("#burritobutton4").click(function(){
+				$(".recentrecipes").hide();
+				$(".searchsettings").hide();
+				$(".needhelp").hide();
+				$(".burritobutton4").hide();
+				$("#burritobutton1").show();
+				$("#burritobutton2").show();
+				$("#burritobutton3").show();
+				});
+		});
+}
+else {
+	$("#burritobutton1").click(function(){
+			$(".searchsettings").show();
+			$(".recentrecipes").hide();
+			$(".needhelp").hide();
+		});
+		
+	$("#burritobutton2").click(function(){
+			$(".searchsettings").hide();
+			$(".recentrecipes").show();
+			$(".needhelp").hide();
+		});
+	$("#burritobutton3").click(function(){
+			$(".searchsettings").hide();
+			$(".recentrecipes").hide();
+			$(".needhelp").show();
+		});
+}
+		});
+
+
+</script>
+</head>
+<body>
+<header>
+	<div class="container">
+		<div id="header_interior">
+			<img class="logo" src="logo.png" alt="Phoenix Recipes">
+			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+			<img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<a onclick=""><button type="button" class=".btn-link pointer">Sign Up/Log in</button></a>
+		</div>
+	<div>
+</header>
+<nav class="navbar">
+	<div>
+		<div id="nav_interior">		
+			<ul class="navbar-nav nav">
+				<li class="active"><a class="dat_class" href="#">Home</a></li>
+				<li><a class="dat_class" href="#">Recipes</a></li>
+				<li><a class="dat_class" href="#">Weekly Report</a></li>
+				<li><a class="dat_class" href="#">Partners</a></li>
+			</ul>	
+		</div>
+	</div>
+</nav>
+<main>
+<div class="container">
+<div class="sidegoofs">
+<button id="burritobutton1">Customize Search</button>
+<button id="burritobutton2" type="button">Recent Recipes</button>
+<button id="burritobutton3" type="button">Need Help?</button>
+<button id="burritobutton4"> Back </button>
+
+</div>
+<div class="maingoofs">
+	<div class="searchsettings">
+		
+		<strong><p> Customize your food preferences</p> </strong>
+		<form action="">
+		<input type="checkbox" name="food"
+		value="meat"> Meat<br><br><br>
+		<input type="checkbox" name="food"
+		value="dairy"> Dairy<br><br><br>
+		<input type="checkbox" name="food"
+		value="gluten-free"> Gluten-Free<br><br><br>
+		<input type="checkbox" name="food"
+		value="high protein"> High Protein<br><br><br>
+		<input type="checkbox" name="food"
+		value="bananas"> Bananas<br><br><br>
+		</div>
+	<div class="recentrecipes">
+		<Strong> Can't remember a nutty recipe from before? We're here to help</strong>
+		<div class="urnan">
+		<button class="recentrecipe"> <img src="images/chicken.png" alt="chicken">Tasty food</button>
+		<button class="recentrecipe"> <img src="images/chicken.png" alt="chicken">Tasty food</button>
+		<button class="recentrecipe"> <img src="images/chicken.png" alt="chicken">Tasty food</button>
+		</div>
+		</div>
+	<div class="needhelp">
+	<strong> gotta problem u dingus? </strong><br>
+	Check out our FAQ<br><br><br>
+	
+	still have a problem?<br>
+	then go ahead and <a href "" >contact us</a>
+	</div>
+
+</div>
+</main>
+<footer>
+	<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+		<div class="row" id="bottomNav">
+		<div class="col-xs-3 text-center nav-home"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></div>
+  </div>
+  </div>
+</footer>
+</body>
+</html>
