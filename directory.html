@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Directory</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="base.css" rel="stylesheet" />
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
+	<script href="Javascript/javascript.js" rel="stylesheet"></script>
+	<script href="Javascript/jquery-3.2.1.js"></script>
+	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body  data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<header>
+	<div class="container">
+		<div id="header_interior">
+			<img class="logo" src="images/logo.png" alt="Phoenix Recipes">
+			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+			<img class="logo_center" src="images/logo_2.png" alt="Phoenix Recipes">
+			<a onclick=""><button type="button" class=".btn-link pointer">Sign Up/Log in</button></a>
+		</div>
+	<div>
+</header>
+<nav class="navbar" class="container">
+	<div>
+		<div id="nav_interior">		
+			<ul class="navbar-nav nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Recipes</a></li>
+				<li><a href="#">Weekly Report</a></li>
+				<li><a href="#">Partners</a></li>
+			</ul>	
+		</div>
+	</div>
+</nav>
+<main>
+    <div class="dropdown" id = "dropdownId" class = "container" id="myScrollspy">
+		<button class="dropbtn" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205"  onclick="myFunction()">Filter</button>
+		<ul class = "dropdown-content" id = "myDropdown" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+			<li><button type = "button" name = "filter" value = "all" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"> <br></button>
+			<li><button type = "button" name = "filter" value = "option2" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option3" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All" ><br></button>
+			<li><button type = "button" name = "filter" value = "option4" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option5" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option6" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option7" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option8" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option9" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option10" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option11" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option12" class="filterButton"> &nbsp;<img src = "images/meat.jpg" alt = "All"><br></button>
+		</ul>    
+    <script>  
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+            }
+        }
+        }
+        
+    }
+	
+    </script>
+    </div>
+    <div class = "recipe_list">
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<div class="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+
+    </div>
+</main>
+<footer>
+	<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+	 <div class="row" id="bottomNav">
+		<div class="col-xs-3 text-center nav-home"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></div>
+		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></div>
+	</div>
+  </div>
+</footer>
