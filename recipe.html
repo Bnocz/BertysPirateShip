@@ -29,7 +29,7 @@
 	<div>
 		<div id="nav_interior">		
 			<ul class="navbar-nav nav">
-				<li class="active"><a href="#">Home</a></li>
+				<li class="active"><a class="dat_class" href="#">Home</a></li>
 				<li><a href="#">Recipes</a></li>
 				<li><a href="#">Weekly Report</a></li>
 				<li><a href="#">Partners</a></li>
@@ -77,13 +77,54 @@
 		Needs to be replaced with recipe lists from a database
 		-->
 		<div>
-		<ul>
-			<li>Turkey</li>
-			<li>Mashed Taters</li>
-			<li>Cranberry SAAAAAAAAUCE</li>
-		</ul>
+		<table>
+		<form>
+		<tr>
+			<td>
+			<select name="servingsize">
+			<option value="1/4">1/4</option>
+			<option value="1/2">1/2</option>
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			</select>
+			</td>
+			<th>Serving Size</th>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">Turkey</td>
+			<td></td>
+			<td>
+			<input type="checkbox" name="leftover" value="yes">Leftover?
+			</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">Mashed Taters</td>
+			<td></td>
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		<tr>
+		</tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">Cranberry SAAAAAAAAUCE</td>
+			<td></td>
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		</form>
+		</table>
 		</div>
-	
+	<br>
+	<br>
+	<br>
 	<div>
 	<h3 id="listheader">Instructions</h3>
 		<div>
@@ -94,10 +135,11 @@
 		</ol>
 		</div>
 	</div>
+	<br>
 	<p>Comments</p>
 	
 	</div>	
-		
+	<br>	
 </div>
 
 </main>
@@ -116,11 +158,11 @@
   firebase.initializeApp(config);
   
   var recipeImage = document.getElementById('recipeImage');
-  var ingredients = document.getElementById('ingredients');
+  var ingredients = document.getElementById('servesizeFirebase');
   var instructions = document.getElementById('instructions');
   var nameRecipe = document.getElementById('nameRecipe');
     
-  var dbRef = firebase.database().ref().child('ingredientsDB');
+  var dbRef = firebase.database().ref().child('servesizeFirebase');
   dbRef.on('value', snap => ingredients.innerText = snap.val());
   var dbRef = firebase.database().ref().child('nameRecipeDB');
   dbRef.on('value', snap => nameRecipe.innerText = snap.val());
