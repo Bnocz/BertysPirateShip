@@ -435,11 +435,13 @@ h1 {
 	float: left;
 	height: 300px;
 	width: 300px;
+	margin-bottom: 10px;
 }
 .nutz {
 	float: left;
 	height: 300px;
 	width: 300px;
+	margin-bottom: 10px;
 }
 .odd {
 	font-family: 'Exo 2', sans-serif;
@@ -458,15 +460,18 @@ h1 {
 	.deez {
 		height: 80px;
 		width:80px;
+		margin-bottom: 10px;
 	}
 	.nutz{
 		height:80px;
 		width:80px;
+		margin-bottom: 10px;
 		
 	}
 	.nutzz {
 		height:80px;
 		width:110px;
+		margin-bottom: 10px;
 	}
 	.odd {
 		font-size:75%;
