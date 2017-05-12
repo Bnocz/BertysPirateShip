@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="base.css" rel="stylesheet">
+	<link href="stats.css" rel="stylesheet">
+
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+    <script href="Javascript/jquery-3.2.1.js"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div id="header_interior">
+            <img class="logo" src="logo.png" alt="Phoenix Recipes">
+            <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+            <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+            <button class="loginBtn loginBtn--google .btn-link pointer">
+                Login with Google
+            </button>
+        </div>
+    <div>
+</header>
+<nav class="navbar">
+    <div>
+        <div id="nav_interior">        
+            <ul class="navbar-nav nav">
+                <li class="active"><a href="index.html" class="dat_class">Home</a></li>
+                <li><a href="directory.html" class="dat_class">Recipes</a></li>
+                <li><a href="statistics.html" class="dat_class">Statistics</a></li>
+                <li><a href="settings.html" class="dat_class">Account Settings</a></li>
+            </ul>    
+        </div>
+    </div>
+</nav>
+<main>
+<div class="container">
+	<div id="titlehomepage">
+		<h1>Weekly Report</h1>
+	</div>
+	<div>
+	<img src="graphplaceholder.gif" class="center">
+	</div>
+	<div>
+	
+	</div>
+		
+		
+</div>
+
+</main>
+<footer>
+    <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+     <div class="row" id="bottomNav">
+        <div class="col-xs-3 text-center nav-home"><button type="button" href="index.html" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></div>
+        <div class="col-xs-3 text-center"><button type="button" href="directory.html" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></div>
+        <div class="col-xs-3 text-center"><button type="button" href="statistic.html" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></div>
+        <div class="col-xs-3 text-center"><button type="button" href="settings.html" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
+    authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
+    databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
+    projectId: "phoenix-recipes-98a1a",
+    storageBucket: "phoenix-recipes-98a1a.appspot.com",
+    messagingSenderId: "925704811865"
+  };
+  firebase.initializeApp(config);
+  
+  
+  
+  
+</script>
+</body>
+</html>
