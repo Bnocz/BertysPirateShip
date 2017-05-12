@@ -24,15 +24,15 @@
 	 text-align: center;
 	 border: 1px solid black;
  }
- #list {
-	 float: center;
+ #listheader {
+	 margin: 0 auto;
 	 text-align: center;
-	 display: inline-block;
 	 border: 1px solid black;
-	 
  }
  #centerlist {
-	 width: 100%;
+	 width: 75%;
+	 margin:0 auto;
+	 text-align: left;
 	 border: 1px solid black;
  }
  #imagesdiv {
