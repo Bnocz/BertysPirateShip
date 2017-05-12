@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!--Title of the page-->
     <title>Home</title>
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="base.css" rel="stylesheet" />
-
+	<!--Link to response Bootstrap, used for desktop to mobile-->
     <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<!--Font of the header title-->
     <link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
     <script href="Javascript/jquery-3.2.1.js"></script>
 </head>
 <body>
+<!------------------------------
+	Header of all the webpages
+-------------------------------->
 <header>
     <div class="container">
         <div id="header_interior">
+			<!--Logo and Company Title-->
             <img class="logo" src="logo.png" alt="Phoenix Recipes">
             <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
             <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<!--Google login button, not finalized-->
             <button class="loginBtn loginBtn--google .btn-link pointer">
                 Login with Google
             </button>
         </div>
     <div>
 </header>
+<!----------------------------------
+	Navbar for the Desktop version
+----------------------------------->
 <nav class="navbar">
     <div>
         <div id="nav_interior">        
@@ -36,70 +45,77 @@
         </div>
     </div>
 </nav>
+<!----------------------------------
+	Main content of the homepage
+----------------------------------->
 <main id="center-index">
-
+<!--Div for the Welcome heading, buttons and links-->
 <div id="background-image-home">
-
-
+	<!--Div for the Welcome heading, change when the user is logged in-->
 	<div id="titlehomepage">
 		<h1 class="welcome">Welcome To Phoenix Recipes!</h1>
 		<h3 id="intro">"Let your food be reborn"</h3>
 	</div>
+	<!--Div for buttons, about us link, login with google button, Affiliated apps link-->
 	<div id="introcontent">
 		<div id="homepagebuttons">
-
 			<a href="aboutus.html"><button type="button" class="homebutton aboutus">About us</button>
 			<a href="#"><button type="button" class="homebutton googlesignin">Login with Google</button></a>
-			<a href="affiliates.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>
-
+			<a href="affiliatesTEST.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>
 		</div>
 	</div>
+	<!--Link button to go straight to the recipe directory-->
 	<div id="recipelinkdiv">
 			<a class="skip-link" href="directory.html"><button type="button" class="recipelink">Click Here to go Straight to Our Large Assortment of Recipes<br>or check below to sign in or see some of our favorites</button></a><br>
 			<img src="images/down-arrow.png" alt="down-arrow" class="downarrowimage">
 	</div>
 </div>
+<!--Bootstrap container that makes the page more reponsive-->
 <div class="container">
+	<!--Featured recipe's heading title-->>
 	<div id="featured">
 		<h1 class="welcome" style="color: black; margin-top: 20px; margin-bottom: 20px;">Featured Recipes</h1>
 	</div>
+	<!--Each recipe in the featured recipes-->
 	<div class = "recipe_list">
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
 		<div class="recipe">
-			<a href=""><img src="images/food_placeholder.png" alt="food" id="food">
+			<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
 			<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
 		</div>
+		<!--A div to remove overlay of mobile navbar-->
 		<div id="escapenav"></div>
     </div>
 </div>
 </main>
+<!--Not footer, instead is the bottom navbar for the mobile-->
 <footer>
     <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
      <div class="row" id="bottomNav">
