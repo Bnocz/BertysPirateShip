@@ -103,6 +103,9 @@ nav {
 	margin-bottom: 0px;
 	z-index: 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Boatswain_Jaisreet
 }
 .nav-home {
 	padding-left: 0;
@@ -118,6 +121,7 @@ nav {
 .row {
 	margin-right: 15px;
 }
+<<<<<<< HEAD
 =======
 }
 .nav-home {
@@ -135,6 +139,8 @@ nav {
 	margin-right: 15px;
 }
 >>>>>>> 6bd8965ef2037e4b3c32ac132d90a33eed7c1769
+=======
+>>>>>>> Boatswain_Jaisreet
 .navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
 	display: none;
 }
@@ -201,10 +207,14 @@ nav {
 	font-size: 16px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media only screen and (min-width: 300px) and (max-width:620px){
 =======
 @media only screen and (min-width: 1px) and (max-width:669px) {
 >>>>>>> 6bd8965ef2037e4b3c32ac132d90a33eed7c1769
+=======
+@media only screen and (min-width: 1px) and (max-width:669px) {
+>>>>>>> Boatswain_Jaisreet
 	#intro {
 		float: none;
 		margin: 0 auto 0 auto;
@@ -318,25 +328,42 @@ nav {
 }
 /*--------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Boatswain_Jaisreet
 	Directory Page
 ---------------------------------------------------*/
 .dropbtn {
     background-color: #2DD9FF;
     color: white;
+<<<<<<< HEAD
     padding: 16px;
+=======
+    padding: 0;
+>>>>>>> Boatswain_Jaisreet
     font-size: 16px;
     border: none;
     cursor: pointer;
 	width: 20%;
+<<<<<<< HEAD
 	float: left;
 	position: fixed;
 	left: 0;
 	top: 235px;
+=======
+	height: 45px;
+	float: left;
+	margin-left: 0;
+	top: 235px;
+	display: inline-block;
+	position: fixed;
+>>>>>>> Boatswain_Jaisreet
 }
 .recipe_list {
 	float: right;
 	width: 80%;
 }
+<<<<<<< HEAD
 @media only screen and (min-width: 300px) and (max-width:620px) { 
 .dropbtn {
 	top: 173px;
@@ -349,6 +376,58 @@ nav {
 
 .dropdown {
     position: fixed;
+=======
+
+@media only screen and (min-width: 300px) and (max-width:620px) { 
+div.recipe_list{
+	width: 100%;
+	height: 100%;
+	margin-top: 25px;
+	display: inline-block;
+}
+div.recipe {
+	width: 50%;
+	height: 50%;
+}
+div.recipe:nth-child(even) {
+	float: left;
+}
+div.recipe:nth-child(odd) {
+	float: right;
+}
+.filterButton {
+	height: 50%;
+	width: 50%;
+}
+.filterButton:nth-child(even) {
+	float: left;
+}
+.filterButton:nth-child(odd) {
+	float: right;
+}
+#food {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.dropbtn {
+	top: 124px;
+	left: 0;
+	width: 100%;
+	position: fixed;
+	display: inline-block;
+	z-index: 1;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #bbfffc;
+}
+
+.dropdown {
+>>>>>>> Boatswain_Jaisreet
     display: inline-block;
 	float: left;
 }
@@ -358,11 +437,19 @@ nav {
     position: fixed;
     background-color: #f9f9f9;
     min-width: 160px;
+<<<<<<< HEAD
 	top: 228px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 	width: 20%;
+=======
+	top: 170px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	width: 100%;
+>>>>>>> Boatswain_Jaisreet
 }
 
 .dropdown-content a {
@@ -373,10 +460,20 @@ nav {
 	
 }
 
+<<<<<<< HEAD
 .dropdown a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
 
+=======
+.dropdown a:hover {
+	background-color: #f1f1f1;
+}
+
+.show {
+	display:block;
+}
+>>>>>>> Boatswain_Jaisreet
 }
 
 .dropdown-content {
@@ -390,7 +487,11 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     width: 200px;
+=======
+    width: 20%;
+>>>>>>> Boatswain_Jaisreet
     background-color: #f1f1f1;
 	left: 0;
 	top: 280px;
@@ -406,6 +507,7 @@ img {
 	width: 100%;
 }
 #food {
+<<<<<<< HEAD
 	height: 250px;
 	width: 250px;
 	border: 1px solid black;
@@ -413,18 +515,36 @@ img {
 }
 .nameRecipe {
 	font-size: 1.2em;
+=======
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+}
+.nameRecipe {
+	font-size: 1.1em;
+>>>>>>> Boatswain_Jaisreet
 }
 .recipe {
 	border: 1px solid black;
 	border-radius: 10px 10px;
+<<<<<<< HEAD
 	margin: 0px;
 	display: inline-block;
+=======
+	margin: -2px;
+	position: relative;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 20%;
+	height: 250px;
+>>>>>>> Boatswain_Jaisreet
 }
 a .recipe {
 	text-decoration: none;
 }
 .recipe a:hover {
 	text-decoration:none;
+<<<<<<< HEAD
 	color: red;
 }
 img.star {
@@ -469,3 +589,42 @@ img.star {
     font-size: 18px;
 }
 >>>>>>> 6bd8965ef2037e4b3c32ac132d90a33eed7c1769
+=======
+}
+img.star {
+	height: 20px;
+	width: 20px;
+}
+
+@media only screen and (min-width:1366px) {
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.recipe:hover #food {
+  opacity: 0.3;
+}
+
+.recipe:hover .middle {
+  opacity: 1;
+} 
+}
+.text {
+  background-color: #2DD9FF;
+  color: white;
+  font-size: 1.2em;
+  padding: 16px 32px;
+}
+body {
+    position: relative;
+  }
+.affix {
+    top: 0px;
+  }
+>>>>>>> Boatswain_Jaisreet
