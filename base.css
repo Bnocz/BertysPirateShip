@@ -8,12 +8,14 @@
 body {
 	margin: 0 auto 0 auto;
 	width: 100%; 
+	background: #f6aa1c;
+	background: linear-gradient(#f6aa1c, white);
 } 
 header {
 	width: 100%;
-	background-color: #2DD9FF;
+	background-color: #941b0c;
 	top: 0;
-	border-top: 10px solid #0092b2;
+	border-top: 10px solid #220901;
 } 
 #header_interior {
 	margin: 0 auto 0 auto; 
@@ -41,7 +43,7 @@ header {
 	position: relative;
 	top: 20px;
 	right: 5px;
-	color: #FF7C08;
+	color: #f6aa1c;
 } 
 @media only screen and (min-width: 1px) and (max-width: 621px) {
 	.logo {
@@ -64,9 +66,7 @@ header {
 .pointer {
 	width: 30%;
 	min-height: 50px;
-	border: 1px solid #2DD9FF;
 	font-size: 24px;
-	background-color: #2DD9FF;
 	float: right;
 	color: white;
 } 
@@ -83,13 +83,13 @@ header {
 }
 nav {
 	margin: 0 auto 0 auto;
-	background-color: #71E1F9;
+	background-color: #bc3908;
 	width: 100%;
 }
 #nav_interior {
 	margin: 0 auto 0 auto;
 	width: 80%;
-	background-color: #71E1F9;
+	background-color: #bc3908;
 }
 .mobile-nav {
 	text-decoration: none;
@@ -149,7 +149,7 @@ nav {
 		display: block;
 	}
 	header {
-		border-top: 5px solid #0092b2;
+		border-top: 5px solid #e92100;
 	}
 }
 /*--------------------------------------------------
@@ -298,7 +298,7 @@ nav {
 	Directory Page
 ---------------------------------------------------*/
 .dropbtn {
-    background-color: #2DD9FF;
+    background-color: #f6aa1c;
     color: white;
     padding: 0;
     font-size: 16px;
@@ -421,7 +421,7 @@ li{
     display: block;
     color: #000;
 }
-img {
+.filterimage {
 	height: 100%;
 	width: 100%;
 }
@@ -474,7 +474,7 @@ img.star {
 } 
 }
 .text {
-  background-color: #2DD9FF;
+  background-color: #941b0c;
   color: white;
   font-size: 1.2em;
   padding: 16px 32px;
