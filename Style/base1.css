@@ -8,15 +8,14 @@
 body {
 	margin: 0 auto 0 auto;
 	width: 100%; 
-	background: #f2f1ea;
-    background: linear-gradient(#cdd00f, white);
+	background: #f6aa1c; /* For browsers that do not support gradients */
+    background: linear-gradient(#f6aa1c, white); /* Standard syntax */
 } 
 header {
 	width: 100%;
-    background: #7e611b;
-	background: linear-gradient(#7e611b, #d6bb8c);
+    background: #941b0c;
 	top: 0;
-	border-top: 10px solid #3a2603;
+	border-top: 10px solid #220901;
 } 
 #header_interior {
 	margin: 0 auto 0 auto; 
@@ -44,7 +43,7 @@ header {
 	position: relative;
 	top: 20px;
 	right: 5px;
-	color: white;
+	color: #f6aa1c;
 } 
 @media only screen and (min-width: 1px) and (max-width: 621px) {
 	.logo {
@@ -67,9 +66,9 @@ header {
 .pointer {
 	width: 30%;
 	min-height: 50px;
-	border: 2px solid black;
+	border: 2px solid #220901;
 	font-size: 24px;
-	background: #cdd00f;
+	background: linear-gradient(#FFDF00, #f6aa1c);
 	float: right;
 	color: white;
 } 
@@ -86,7 +85,7 @@ header {
 }
 nav {
 	margin: 0 auto 0 auto;
-	background-color: #90a407;
+	background-color: #bc3908;
 	width: 100%;
 }
 #nav_interior {
@@ -95,7 +94,7 @@ nav {
 	background-color: black; 
 }
 .dat_class {
-	color: white;
+	color: #f2f1ea;
 }
 .mobile-nav {
 	text-decoration: none;
@@ -155,7 +154,7 @@ nav {
 		display: block;
 	}
 	header {
-		border-top: 5px solid #3a2603;
+		border-top: 5px solid #E92100;
 	}
 }
 /*--------------------------------------------------
@@ -174,7 +173,7 @@ main {
 	font-size: 50px;
 	margin-top: 30px;
 	margin-bottom: 50px;
-	color: #0000ce;
+	color: #bc3908;
 }
 #introcontent {
 	width: 80%;
@@ -199,7 +198,7 @@ main {
 		font-size: 24px;
 		margin-top: 15px;
 		margin-bottom: 15px;
-		color: #0000ce;
+		color: #bc3908;
 	}
 	#intro p{
 		font-size: 12px;
@@ -222,7 +221,7 @@ main {
 	margin-bottom: 5px;
 	border: 2px solid black;
 	border-radius: 5px;
-	background-color: #d6bb8c;
+	background: linear-gradient(#FFDF00, #f6aa1c);
 	color: white;
 	z-index: -1;
 }
@@ -235,7 +234,7 @@ main {
 	margin-bottom: 5px;
 	border: 2px solid black;
 	border-radius: 5px;
-	background-color: #d6bb8c;
+	background: linear-gradient(#FFDF00, #f6aa1c);
 	color: white;
 	z-index: -1;
 }
@@ -248,7 +247,7 @@ main {
 	margin-bottom: 5px;
 	border: 2px solid black;
 	border-radius: 5px;
-	background-color: #d6bb8c;
+	background: linear-gradient(#FFDF00, #f6aa1c);
 	color: white;
 	z-index: -1;
 }
@@ -261,7 +260,7 @@ main {
 	margin-bottom: 5px;
 	border: 2px solid black;
 	border-radius: 5px;
-	background-color: #d6bb8c;
+	background: linear-gradient(#FFDF00, #f6aa1c);
 	color: white;
 	z-index: -1;
 }
