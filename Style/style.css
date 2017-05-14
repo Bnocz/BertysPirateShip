@@ -1,0 +1,121 @@
+/*-------------------------------------------------
+    Settings brevs
+---------------------------------------------------*/
+.sidegoofs {
+	width: 20%;
+	background: linear-gradient(#ffbe28, #fffb47);
+	float:left;
+}
+#burritobutton1 {
+	height:210px;
+	width:100%;
+	background: linear-gradient(white, gray);
+}
+#burritobutton2 {
+	height:210px;
+	width:100%;
+	background: linear-gradient(white, gray);
+}
+#burritobutton3 {
+	height:210px;
+	width:100%;
+	background: linear-gradient(white, gray);
+}
+.maingoofs {
+	background: linear-gradient(#ffbe28, #fffb47);
+	height: 630px;
+}
+.searchsettings {
+	text-align:center;
+	padding-top: 5%;
+}
+.searchsettings input {
+	width:20px;
+	height:20px;
+}
+.searchsettingsnone {
+	display:none;
+}
+.recentrecipes {
+color:white;
+}
+.test{
+	color:blue;
+}
+.recentrecipes button {
+	width: 250px;
+	margin-left:60px;
+	display: block;
+}
+.recentrecipes button img {
+	height:150px;
+	width: 180px;
+}
+
+.urnan {
+margin-left: 400px;
+}
+
+.urdan {
+	margin-top: 50px;
+	margin-left: 450px;
+	float:right;
+}
+
+.needhelp {
+	text-align: center;
+	font-size: 4em;
+}
+
+@media only screen and (min-width: 1px) and (max-width:621px) {
+	.sidegoofs {
+		width:100%;
+		height:650px;
+	}
+	#burritobutton1 {
+		height: 190px;
+		width: 100%;
+}
+	#burritobutton2 {
+		height: 190px;
+		width: 100%;
+}
+	#burritobutton3 {
+		height: 190px;
+		width: 100%;
+}
+	#burritobutton4 {
+		height: 130px;
+		width: 100%;
+		position:relative;
+		top:450px;
+}
+	.searchsettings {
+		position: relative;
+		bottom:600px;
+	}
+	.searchsettings input {
+		width:30px;
+		height: 30px;
+		position: relative;
+	}
+
+.recentrecipes {
+	position: relative;
+	bottom:650px;
+}
+.recentrecipes button {
+	height:100px;
+	width:100px;
+	margin-top: 25px;
+}
+.recentrecipes button img {
+	height:95px;
+	width:95px;
+}
+.needhelp {
+	font-size:2em;
+	position: relative;
+	bottom: 600px;
+}
+}
