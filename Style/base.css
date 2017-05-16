@@ -347,7 +347,7 @@ nav {
 }
 /* home page image */
 #background-image-home {
-	background-image: url("images/food-03.png");
+	background-image: url("../images/food-03.png");
 	display: block;
 	background-size: cover;
 	padding-top: 40px;
