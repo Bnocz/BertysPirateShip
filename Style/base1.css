@@ -54,7 +54,7 @@ header {
 		margin: 0 auto 0 auto;
 		width: 25%;
 		min-width: 110px;
-		min-height: 110px;
+		min-height: 110px;   
 	}
 	.title {
 		display: none;

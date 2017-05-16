@@ -1,8 +1,8 @@
 /*--------------------------------------------------
-	Directory Page
+	 Directory Page
 ---------------------------------------------------*/
 .dropbtn {
-    background-color: #2DD9FF;
+    background-color: #941b0c;
     color: white;
     padding: 0;
     font-size: 16px;
@@ -12,40 +12,57 @@
 	height: 45px;
 	float: left;
 	margin-left: 0;
-	top: 235px;
+	left: 0;
 	display: inline-block;
 	position: fixed;
+	z-index: 1;
 }
+
+.dropdown-content {
+	position: fixed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6aa1c ;
+	left: 0;
+	width: 20%;
+	display: inline-block;
+	top: 300px;
+}
+
 .recipe_list {
 	float: right;
 	width: 80%;
 }
 
 @media only screen and (min-width: 300px) and (max-width:620px) { 
-div.recipe_list{
+.recipe_list{
 	width: 100%;
 	height: 100%;
 	margin-top: 25px;
 	display: inline-block;
 }
-div.recipe {
+div#recipe {
 	width: 50%;
 	height: 50%;
 }
-div.recipe:nth-child(even) {
+div#recipe:nth-child(even) {
 	float: left;
 }
-div.recipe:nth-child(odd) {
+div#recipe:nth-child(odd) {
 	float: right;
 }
-.filterButton {
+#filterButton {
 	height: 50%;
 	width: 50%;
 }
-.filterButton:nth-child(even) {
+#filterButton:nth-child(even) {
 	float: left;
 }
-.filterButton:nth-child(odd) {
+#filterButton:nth-child(odd) {
 	float: right;
 }
 #food {
@@ -65,8 +82,9 @@ div.recipe:nth-child(odd) {
 	display: inline-block;
 	z-index: 1;
 }
+
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #bbfffc;
+    background-color: #941b0c;
 }
 
 .dropdown {
@@ -102,28 +120,11 @@ div.recipe:nth-child(odd) {
 	display:block;
 }
 }
-
-.dropdown-content {
-	position: fixed;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	height: 100%;
-}
-
-#dropdown {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 20%;
-    background-color: #f1f1f1;
-	left: 0;
-	top: 280px;
-	display: inline-block;
-}
-
-#filterButton {
-    display: block;
+   
+#filterButton{
+    display: inline-block;
     color: #000;
+	height: 80px;
 }
 #filterImage {
 	height: 100%;
@@ -132,12 +133,12 @@ div.recipe:nth-child(odd) {
 #food {
 	height: 100%;
 	width: 100%;
-	border: 1px solid black;
 }
+
 .nameRecipe {
 	font-size: 1.1em;
 }
-.recipe {
+#recipe {
 	border: 1px solid black;
 	border-radius: 10px 10px;
 	margin: -2px;
@@ -147,10 +148,10 @@ div.recipe:nth-child(odd) {
 	width: 20%;
 	height: 250px;
 }
-a .recipe {
+a #recipe {
 	text-decoration: none;
 }
-.recipe a:hover {
+#recipe a:hover {
 	text-decoration:none;
 }
 img.star {
@@ -169,23 +170,23 @@ img.star {
   -ms-transform: translate(-50%, -50%)
 }
 
-.recipe:hover #food {
+#recipe:hover #food {
   opacity: 0.3;
 }
 
-.recipe:hover .middle {
+#recipe:hover .middle {
   opacity: 1;
 } 
 }
 .text {
-  background-color: #2DD9FF;
+  background-color:#f6aa1c;
   color: white;
   font-size: 1.2em;
   padding: 16px 32px;
 }
-body {
+.directory{
     position: relative;
-  }
+}
 .affix {
     top: 0px;
-  }
+}
