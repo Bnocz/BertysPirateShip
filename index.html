@@ -1,72 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
-    <meta charset="utf-8">
+	<!--Title of the page-->
+	<title>Home</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="base.css" rel="stylesheet" />
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<link href="Style/base.css" rel="stylesheet" />
+	<!--Link to response Bootstrap, used for desktop to mobile-->
+	<link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<!--Font of the header title-->
 	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
-	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
-	<script href="Javascript/jquery-3.2.1.js"></script>
-	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+	<script src="Javascript/jquery-3.2.1.js"></script>
 </head>
 <body>
+<!------------------------------
+	Header of all the webpages
+-------------------------------->
 <header>
 	<div class="container">
 		<div id="header_interior">
+			<!--Logo and Company Title-->
 			<img class="logo" src="logo.png" alt="Phoenix Recipes">
 			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
 			<img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
-			<a onclick=""><button type="button" class=".btn-link pointer">Sign Up/Log in</button></a>
+			<!--Google login button, not finalized-->
+			<div>
+				<div hidden id="user-pic"></div>
+				<div hidden id="user-name"></div>
+				<button id="sign-out" class="">
+					Sign-out
+				</button>
+				<button hidden id="sign-in" class="loginBtn loginBtn--google .btn-link pointer">
+					Login with Google
+				</button>
+			</div>
 		</div>
-	<div>
+		<div>
 </header>
+<!----------------------------------
+	Navbar for the Desktop version
+----------------------------------->
 <nav class="navbar">
 	<div>
-		<div id="nav_interior">		
+		<div id="nav_interior">
 			<ul class="navbar-nav nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Recipes</a></li>
-				<li><a href="#">Weekly Report</a></li>
-				<li><a href="#">Partners</a></li>
-			</ul>	
+				<li class="active"><a href="index.html" class="dat_class">Home</a></li>
+				<li><a href="directory.html" class="dat_class">Recipes</a></li>
+				<li><a href="statistics.html" class="dat_class">Statistics</a></li>
+				<li><a href="settings.html" class="dat_class">Account Settings</a></li>
+			</ul>
 		</div>
 	</div>
 </nav>
+<!----------------------------------
+	Main content of the homepage
+----------------------------------->
 <main id="center-index">
-<div class="container">
-	<div id="titlehomepage">
-		<h1 class="welcome">Welcome To Phoenix Recipes!</h1>
-	</div>
-	<div id="introcontent">
-		<div id="intro">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? random</p>
+	<!--Div for the Welcome heading, buttons and links-->
+	<div id="background-image-home">
+		<!--Div for the Welcome heading, change when the user is logged in-->
+		<div id="titlehomepage">
+			<h1 class="welcome" id="welcome">Welcome to Phoenix Recipes</h1>
+			<h3 id="intro">"Let your food be reborn"</h3>
 		</div>
-		<div id="homepagebuttons">
-			<button type="button" class="logonbutton">Log On</button>
-			<button type="button" class="signupbutton">Sign Up</button>
-			<button type="button" class="contributors">Contributors</button>
-			<button type="button" class="affilatedapps">Affilated Apps</button>
+		<!--Div for buttons, about us link, login with google button, Affiliated apps link-->
+		<div id="introcontent">
+			<div id="homepagebuttons">
+				<a href="Aboutus.html"><button type="button" class="homebutton aboutus">About us</button>
+					<a href="#"><button type="button" class="homebutton googlesignin">Log in with Google</button>
+					<a href="affiliates.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>
+			</div>
 		</div>
-		<div class="recipelinkdiv">
-			<p class="recipelink"><a href="">Click Here to go Straight to Our Large Assortment of Recipes,</a><br>or check below to see our favorites</p>
+		<!--Link button to go straight to the recipe directory-->
+		<div id="recipelinkdiv">
+			<a class="skip-link" href="directory.html"><button type="button" class="recipelink">Click Here to go Straight to Our Large Assortment of Recipes<br>or check below to sign in or see some of our favorites</button></a><br>
+			<img src="images/down-arrow.png" alt="down-arrow" class="downarrowimage">
 		</div>
 	</div>
-	<div id="featured">
-		<h1 class="featuredtitle">Featured Recipes</h1>
+	<!--Bootstrap container that makes the page more reponsive-->
+	<div class="container">
+		<!--Featured recipe's heading title-->>
+		<div id="featured">
+			<h1 class="welcome" style="color: black; margin-top: 20px; margin-bottom: 20px;">Featured Recipes</h1>
+		</div>
+		<!--Each recipe in the featured recipes-->
+		<div class = "recipe_list">
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<div class="recipe">
+				<a href="recipe.html"><img src="images/food_placeholder.png" alt="food" id="food">
+					<p class = "titleRecipe">Title of the recipe. &nbsp; &nbsp; &nbsp; &nbsp; <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</p></a>
+			</div>
+			<!--A div to remove overlay of mobile navbar-->
+			<div id="escapenav"></div>
+		</div>
 	</div>
-</div>
 </main>
+<!--Not footer, instead is the bottom navbar for the mobile-->
 <footer>
 	<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
-	 <div class="row" id="bottomNav">
-		<div class="col-xs-3 text-center nav-home"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></div>
-		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></div>
-		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></div>
-		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></div>
+		<div class="row" id="bottomNav">
+			<div class="col-xs-3 text-center nav-home"><a href="index.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></a></div>
+			<div class="col-xs-3 text-center"><a href="directory.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></a></div>
+			<div class="col-xs-3 text-center"><a href="statistics.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></a></div>
+			<div class="col-xs-3 text-center"><a href="settings.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></a></div>
+		</div>
 	</div>
-  </div>
 </footer>
+<script src="/__/firebase/3.8.0/firebase.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+<script src="Javascript/mainauth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD-sz8xovj1JyAMhIwVHogFaDPbZtbB7HQ",
+        authDomain: "phoenixrecipestest.firebaseapp.com",
+        databaseURL: "https://phoenixrecipestest.firebaseio.com",
+        projectId: "phoenixrecipestest",
+        storageBucket: "phoenixrecipestest.appspot.com",
+        messagingSenderId: "1087554749416"
+    };
+    firebase.initializeApp(config);
+</script>
 </body>
 </html>

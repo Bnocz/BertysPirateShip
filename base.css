@@ -7,16 +7,16 @@
 }
 body {
 	margin: 0 auto 0 auto;
-	width: 100%; 
-} 
+	width: 100%;
+}
 header {
 	width: 100%;
 	background-color: #2DD9FF;
 	top: 0;
 	border-top: 10px solid #0092b2;
-} 
+}
 #header_interior {
-	margin: 0 auto 0 auto; 
+	margin: 0 auto 0 auto;
 	width: 95%;
 }
 .logo {
@@ -25,7 +25,7 @@ header {
 	min-height: 110px;
 	float: left;
 	clear: both;
-	
+
 }
 .logo_center {
 	display: none;
@@ -42,7 +42,7 @@ header {
 	top: 20px;
 	right: 5px;
 	color: #FF7C08;
-} 
+}
 @media only screen and (min-width: 1px) and (max-width: 621px) {
 	.logo {
 		display: none;
@@ -69,7 +69,7 @@ header {
 	background-color: #2DD9FF;
 	float: right;
 	color: white;
-} 
+}
 @media only screen and (min-width: 621px) and (max-width:1000px) {
 	.pointer {
 		min-height: 35px;
@@ -178,7 +178,7 @@ nav {
 	float: left;
 	text-align: center;
 	clear: both;
-	position: relative; 
+	position: relative;
 	left: 50px;
 	font-size: 16px;
 }
@@ -195,7 +195,7 @@ nav {
 	}
 	#intro {
 		font-size: 13px;
-		width: 90%; 
+		width: 90%;
 	}
 }
 #homepagebuttons {
@@ -203,7 +203,7 @@ nav {
 	margin-left: 80%;
 	display: block;
 	height: 375px;
-	position: relative; 
+	position: relative;
 	top: 15px;
 }
 .logonbutton {
