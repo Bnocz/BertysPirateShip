@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Title of the page-->
+    <title>Putting the fresh in refresh</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Style/base.css" rel="stylesheet">
+	<link href="Style/recipe.css" rel="stylesheet">
+	<!--Link to response Bootstrap, used for desktop to mobile-->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <!--Font of the header title-->
+	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+    <script href="Javascript/jquery-3.2.1.js"></script>
+</head>
+<body>
+<!------------------------------
+	Header of all the webpages
+-------------------------------->
+<header>
+    <div class="container">
+        <div id="header_interior">
+			<!--Logo and Company Title-->
+            <img class="logo" src="logo.png" alt="Phoenix Recipes">
+            <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+            <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<!--Google login button, not finalized-->
+            <button class="loginBtn loginBtn--google .btn-link pointer">
+                Login with Google
+            </button>
+        </div>
+    <div>
+</header>
+<!----------------------------------
+	Navbar for the Desktop version
+----------------------------------->
+<nav class="navbar">
+    <div>
+        <div id="nav_interior">        
+            <ul class="navbar-nav nav">
+                <li class="active"><a href="index.html" class="dat_class">Home</a></li>
+                <li><a href="directory.html" class="dat_class">Recipes</a></li>
+                <li><a href="statistics.html" class="dat_class">Statistics</a></li>
+                <li><a href="settings.html" class="dat_class">Account Settings</a></li>
+            </ul>    
+        </div>
+    </div>
+</nav>
+<!----------------------------------
+	Main content of the recipe pages
+----------------------------------->
+<main>
+<div class="container">
+	<div id="titlehomepage">
+		<h1 id="nameRecipe">Hot cross bread and lemon pudding</h1>
+	</div>
+	
+	<!-- Div containing the 3 columns -->
+	<div id="imagesdiv">
+	<!-- Div containing column 1 (the left column) -->
+	<div id="column1">
+		<img width="30" src="left.png">
+	</div>
+	<!-- Div containing column 1 (the left column) -->
+	<div id="column2outer">
+		<!-- Div containing column 2 (the middle column) -->
+		<div id="column2mid">
+			<img id="foodsize" src="images/hotbreadandlemon.jpg">
+		</div>
+		<!-- Div containing column 3 (the right column) -->
+		<div id="column2side">
+			<img width="30" src="right.png">
+		</div>
+	</div>
+	</div>
+
+	<div id="centerlist">
+	<h3 id="listheader">Ingredients</h3>
+		<!--PLACEHOLDER LIST
+		Needs to be replaced with recipe lists from a database
+		-->
+		<div>
+		<!--  -->
+		<table>
+		<form>
+		<tr>
+			<td>
+			<!-- Dropdown containing serving sizes 
+			NOTE: needs to have functionality to alter ingredient amounts
+			-->
+			<select name="servingsize">
+			<option value="1/4">1/4</option>
+			<option value="1/2">1/2</option>
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			</select>
+			</td>
+			<th>Serving Size</th>
+		</tr>
+		<tr>
+			<td><br></td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">Knob of butter.</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify waste saved to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">1 stale hot cross bun</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">50g lemon curd</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">1 small egg</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">50ml double cream</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">50ml milk</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">1/8 vanilla extract</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">1 tbsp caster sugar</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">little lemon zest</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		<tr>
+			<td id="servesizeFirebase"></td>
+			<td id="ingredientTable">Cream or vanilla ice-cream to serve(optional)</td>
+			<td></td>
+			<!-- Cell containing checkbox for leftovers
+			NOTE: needs to have functionality to signify the waste prevented to stats page
+			-->
+			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
+		</tr>
+		</form>
+		</table>
+		</div>
+	<br>
+	<br>
+	<br>
+	<!-- Div containing recipe instruction 
+		NOTE: needs to have button to send/save data to stats page
+	-->
+	<div>
+	<h3 id="listheader">Instructions</h3>
+		<div>
+		<ol>
+		<li>Butter a 1-litre baking dish that will quite snugly fit the buns. Cut each bun into 3 slices, and sandwich back together with a generous spreading of curd. Arrange buns in the dish.
+		<li>Whisk egg, cream, milk and remaining curd, then sieve into a jug with the vanilla and 3 tbsp of the sugar. Pour over the buns and stand at room temperature for 30 mins for the custard to soak in.
+		<li>Heat oven to 160C/140C fan/ gas 3. Scatter the remaining sugar and lemon zest over the pudding. Bake for 30-40 mins until the top is golden and the custard gently set. Stand for 5 mins, then serve with cream or vanilla ice cream, if you like.
+		</ol>
+		</div>
+	</div>
+	<br>
+	<p>Comments</p>
+	
+	</div>	
+	<br>	
+</div>
+
+</main>
+<footer>
+    <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+     <div class="row" id="bottomNav">
+        <div class="col-xs-3 text-center nav-home"><a href="index.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></a></div>
+        <div class="col-xs-3 text-center"><a href="directory.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></a></div>
+        <div class="col-xs-3 text-center"><a href="statistics.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></a></div>
+        <div class="col-xs-3 text-center"><a href="settings.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></a></div>
+    </div>
+ </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
+    authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
+    databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
+    projectId: "phoenix-recipes-98a1a",
+    storageBucket: "phoenix-recipes-98a1a.appspot.com",
+    messagingSenderId: "925704811865"
+  };
+  firebase.initializeApp(config);
+  
+  var recipeImage = document.getElementById('recipeImage');
+  var ingredients = document.getElementById('servesizeFirebase');
+  var instructions = document.getElementById('instructions');
+  var nameRecipe = document.getElementById('nameRecipe');
+    
+  var dbRef = firebase.database().ref().child('servesizeFirebase');
+  dbRef.on('value', snap => ingredients.innerText = snap.val());
+  
+</script>
+</body>
+</html>
+</html>
