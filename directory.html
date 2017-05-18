@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!--Title of the page-->
     <title>Directory</title>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="Style/base1.css" rel="stylesheet" />
-    <link href="Style/directory.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="base1.css" rel="stylesheet" />
+    <link href="style/directory.css" rel="stylesheet" />
+	<!--Link to response Bootstrap, used for desktop to mobile-->
     <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+	<!--Font of the header title-->
+    <link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+	<!-- Links to the Bootstrap -->
+	<script href="Javascript/jquery-3.2.1.js"></script>
 	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
-	<script href="Javascript/javascript.js" rel="stylesheet"></script>
+	
 	<script href="Javascript/jquery-3.2.1.js"></script>
 	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
 </head>
-<body  data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+<body id="directory">
+<!------------------------------
+	Header of all the webpages
+-------------------------------->
 <header>
-	<div class="container">
-		<div id="header_interior">
-			<img class="logo" src="images/logo.png" alt="Phoenix Recipes">
-			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
-			<img class="logo_center" src="images/logo_2.png" alt="Phoenix Recipes">
-			<a onclick=""><button type="button" class=".btn-link pointer">Sign Up/Log in</button></a>
-		</div>
-	<div>
+    <div class="container">
+        <div id="header_interior">
+			<!--Logo and Company Title-->
+            <img class="logo" src="logo.png" alt="Phoenix Recipes">
+            <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+            <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<!--Google login button, not finalized-->
+            <button class="loginBtn loginBtn--google .btn-link pointer">
+                Login with Google
+            </button>
+        </div>
+    <div>
 </header>
+<!----------------------------------
+	Navbar for the Desktop version
+----------------------------------->
 <nav class="navbar" class="container">
-	<div>
-		<div id="nav_interior">		
-			<ul class="navbar-nav nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Recipes</a></li>
-				<li><a href="#">Weekly Report</a></li>
-				<li><a href="#">Partners</a></li>
-			</ul>	
-		</div>
-	</div>
+    <div>
+        <div id="nav_interior">        
+            <ul class="navbar-nav nav" >
+                <li class="active"><a href="index.html" class="dat_class">Home</a></li>
+                <li><a href="directory.html" class="dat_class">Recipes</a></li>
+                <li><a href="statistics.html" class="dat_class">Statistics</a></li>
+                <li><a href="settings.html" class="dat_class">Account Settings</a></li>
+            </ul>    
+        </div>
+    </div>
 </nav>
+	<!----------------------------------
+	Main content of the recipe's page
+	----------------------------------->
 <main>
+	<!----------------------------------------
+		-Filters the list of recipes.
+		-A dropdown menu in mobile version.
+		-A sidebar in desktop version.
+	------------------------------------------>
     <div class="dropdown" id = "dropdownId" class = "container" id="myScrollspy">
-		<button class="dropbtn" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205"  onclick="myFunction()">Filter</button>
-		<ul class = "dropdown-content" id = "myDropdown" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
-			<li><button type = "button" name = "filter" value = "all" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"> <br></button>
-			<li><button type = "button" name = "filter" value = "option2" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option3" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All" ><br></button>
-			<li><button type = "button" name = "filter" value = "option4" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option5" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option6" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option7" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option8" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option9" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option10" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option11" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option12" class="filterButton"> &nbsp;<img src = "images/meat.jpg" class = "filterImage" alt = "All"><br></button>
-		</ul>    
+		<button class="dropbtn" class="nav nav-pills nav-stacked" class = "container" data-spy="affix" data-offset-top="205"  onclick="myFunction()">Filter</button>
+		<ul class = "dropdown-content" id = "filter-list" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205" id = "myDropdown" >
+			<li><button type = "button" name = "filter" value = "all" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"> <br></button>
+			<li><button type = "button" name = "filter" value = "option2" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option3" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All" ><br></button>
+			<li><button type = "button" name = "filter" value = "option4" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option5" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option6" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option7" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option8" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option9" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option10" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option11" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option12" id="filterButton"> &nbsp;<img id="filterImage"y src = "images/meat.jpg" alt = "All"><br></button>
+		</ul> 
+	<!------------------------------------------------------
+		Script for the dropdown menu for the mobile version.
+	-------------------------------------------------------->		
     <script>  
-    function myFunction() {
+   function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
     // Close the dropdown if the user clicks outside of it
@@ -76,213 +103,420 @@
 	
     </script>
     </div>
+	<!------------------------------------------------------------------
+		This div contains the list of all the recipes.
+	------------------------------------------------------------------->
     <div class = "recipe_list">
-		<div class="recipe">
+	<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
-			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
-			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/meat.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
-			<div class="middle">
-			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
-			</div>
-		</div>
-		<div class="recipe">
-			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
 		</div>
-		<div class="recipe">
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
 			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
+			<div class="middle">
+			<div class = "text">Title of the recipe. <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
+			</div>
+		</div>
+		<!------------------------------------------------------------------
+		This div contains each individual recipes.
+	------------------------------------------------------------------->
+		<div id="recipe">
+			<a href = ""><img src = "images/food.jpg" alt = "food" id = "food">
+			<!-----------------------------------------------------------
+				This div contains the name of the recipe and user ratings.
+			------------------------------------------------------------>
 			<div class="middle">
 			<div class = "text">Title of the recipe.  <img src = "images/star.jpg" alt = "rating" class = "star"> 3.5</div></a>
 			</div>
@@ -290,15 +524,14 @@
 
     </div>
 </main>
+<!--Not footer, instead is the bottom navbar for the mobile-->
 <footer>
-	<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
-	 <div class="row" id="bottomNav">
-		<div class="col-xs-3 text-center nav-home"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></div>
-		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></div>
-		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></div>
-		<div class="col-xs-3 text-center"><button type="button" href="#" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></div>
-  </div>
-  </div>
+    <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+     <div class="row" id="bottomNav">
+        <div class="col-xs-3 text-center nav-home"><a href="index.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></a></div>
+        <div class="col-xs-3 text-center"><a href="directory.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></a></div>
+        <div class="col-xs-3 text-center"><a href="statistics.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></a></div>
+        <div class="col-xs-3 text-center"><a href="settings.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></a></div>
+    </div>
+ </div>
 </footer>
-</body>
-</html>
