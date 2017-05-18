@@ -5,7 +5,7 @@
     <title>Directory</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="base1.css" rel="stylesheet" />
+    <link href="style/base1.css" rel="stylesheet" />
     <link href="style/directory.css" rel="stylesheet" />
 	<!--Link to response Bootstrap, used for desktop to mobile-->
     <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
@@ -14,14 +14,15 @@
 	<!-- Links to the Bootstrap -->
 	<script href="Javascript/jquery-3.2.1.js"></script>
 	<link href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" rel="stylesheet">
-	
+	<script href="Javascript/javascript.js" rel="stylesheet"></script>
 	<script href="Javascript/jquery-3.2.1.js"></script>
 	<script href="Javascript/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
 </head>
-<body id="directory">
+<body class="directory"  data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
 <!------------------------------
 	Header of all the webpages
 -------------------------------->
@@ -64,10 +65,10 @@
 		-A sidebar in desktop version.
 	------------------------------------------>
     <div class="dropdown" id = "dropdownId" class = "container" id="myScrollspy">
-		<button class="dropbtn" class="nav nav-pills nav-stacked" class = "container" data-spy="affix" data-offset-top="205"  onclick="myFunction()">Filter</button>
-		<ul class = "dropdown-content" id = "filter-list" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205" id = "myDropdown" >
-			<li><button type = "button" name = "filter" value = "all" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"> <br></button>
-			<li><button type = "button" name = "filter" value = "option2" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
+		<button class="dropbtn" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205"  onclick="myFunction()">Filter</button>
+		<ul class = "dropdown-content" id = "myDropdown" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205" >
+			<li><button type = "button" name = "filter" value = "all" id="filterButton" onclick="disableBtn()"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"> <br></button>
+			<li><button type = "button" name = "filter" value = "option2" id="filterButton" onclick="disableBtn()"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
 			<li><button type = "button" name = "filter" value = "option3" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All" ><br></button>
 			<li><button type = "button" name = "filter" value = "option4" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
 			<li><button type = "button" name = "filter" value = "option5" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
@@ -77,32 +78,37 @@
 			<li><button type = "button" name = "filter" value = "option9" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
 			<li><button type = "button" name = "filter" value = "option10" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
 			<li><button type = "button" name = "filter" value = "option11" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
-			<li><button type = "button" name = "filter" value = "option12" id="filterButton"> &nbsp;<img id="filterImage"y src = "images/meat.jpg" alt = "All"><br></button>
+			<li><button type = "button" name = "filter" value = "option12" id="filterButton"> &nbsp;<img id="filterImage" src = "images/meat.jpg" alt = "All"><br></button>
 		</ul> 
+
 	<!------------------------------------------------------
 		Script for the dropdown menu for the mobile version.
-	-------------------------------------------------------->		
-    <script>  
-   function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-            }
-        }
-        }
-        
-    }
-	
-    </script>
-    </div>
+	--------------------------------------------------------->
+	<script>
+		/* When the user clicks on the button, 
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+		}
+
+	}
+	</script>
+
+	</div>
 	<!------------------------------------------------------------------
 		This div contains the list of all the recipes.
 	------------------------------------------------------------------->
