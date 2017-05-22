@@ -70,9 +70,6 @@ header {
 	.title {
 		display: none;
 	}
-	header {
-		border-top: 0px solid black;
-	}
 }
 /* Login with Google button for desktop version. Floats on the right in the header. */
 #user-container {
@@ -87,7 +84,6 @@ header {
   top: 40px;
   position: relative;
   display: inline-block;
-  background-image: url('/images/profile_placeholder.png');
   background-repeat: no-repeat;
   width: 40px;
   height: 40px;
@@ -111,11 +107,6 @@ header {
 	float: right;
 	position: relative;
 	top: 35px;
-}
-/* Temp Sign in and Sign out with google */
-.mdl-button .material-icons {
-	top: -1px;
-	margin-right: 5px;
 }
 /* Nav bar for Desktop version */
 nav {
@@ -264,9 +255,6 @@ nav {
 	#user-container #user-name {
 		font-size: 20px;
 		top: 45px;
-	}
-	#user-container {
-		
 	}
 }
 @media only screen and (min-width: 1px) and (max-width:621px) {

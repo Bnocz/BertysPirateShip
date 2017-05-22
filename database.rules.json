@@ -1,6 +1,11 @@
 {
   "rules": {
+<<<<<<< HEAD
     ".read": "auth != null",
     ".write": "auth != null"
+=======
+    ".read": true,
+    ".write": true
+>>>>>>> TheSevenSeas
   }
 }

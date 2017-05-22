@@ -33,8 +33,11 @@ function PhoenixRecipes() {
     // Saves message on form submit.
     this.signOutButton.addEventListener('click', this.signOut.bind(this));
     this.signInButton.addEventListener('click', this.signIn.bind(this));
+<<<<<<< HEAD
     this.signOutHome.addEventListener('click', this.signOut.bind(this));
     this.signInHome.addEventListener('click', this.signIn.bind(this));
+=======
+>>>>>>> TheSevenSeas
 
     this.initFirebase();
 }
@@ -99,7 +102,11 @@ PhoenixRecipes.prototype.onAuthStateChanged = function(user) {
 
         // Show sign-in button.
         this.signInButton.removeAttribute('hidden');
+<<<<<<< HEAD
         this.signInHome.removeAttribute('hidden');
+=======
+        this.signInHome.setAttribute('hidden');
+>>>>>>> TheSevenSeas
 
         // Show the welcome for the user when he is logged off
         this.welcomeHome.removeAttribute('hidden');

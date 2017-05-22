@@ -5,6 +5,7 @@
 	<title>Home</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link href="Style/base.css" rel="stylesheet" />
 	<!--Link to response Bootstrap, used for desktop to mobile-->
 	<link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
@@ -22,14 +23,16 @@
 	<div class="container">
 		<div id="header_interior">
 			<!--Logo and Company Title-->
-			<img class="logo" src="logo.png" alt="Phoenix Recipes">
-			<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
-			<img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			<div id="logo-name">
+				<img class="logo" src="logo.png" alt="Phoenix Recipes">
+				<p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+				<img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+			</div>
 			<!--Google login button, not finalized-->
-			<div>
+			<div id="user-container">
 				<div hidden id="user-pic"></div>
 				<div hidden id="user-name"></div>
-				<button id="sign-out" class="">
+				<button hidden id="sign-out" class="logoutBtn pointer">
 					Sign-out
 				</button>
 				<button hidden id="sign-in" class="loginBtn loginBtn--google .btn-link pointer">
@@ -37,7 +40,7 @@
 				</button>
 			</div>
 		</div>
-		<div>
+	</div>
 </header>
 <!----------------------------------
 	Navbar for the Desktop version
@@ -62,15 +65,17 @@
 	<div id="background-image-home">
 		<!--Div for the Welcome heading, change when the user is logged in-->
 		<div id="titlehomepage">
-			<h1 class="welcome" id="welcome">Welcome to Phoenix Recipes</h1>
+			<h1 hidden class="welcome" id="welcome-home">Welcome to Phoenix Recipes</h1>
+			<h1 hidden class="welcome" id="welcome-user">Welcome <span id="user-name2"></span>, to Phoenix Recipes</h1>
 			<h3 id="intro">"Let your food be reborn"</h3>
 		</div>
 		<!--Div for buttons, about us link, login with google button, Affiliated apps link-->
 		<div id="introcontent">
 			<div id="homepagebuttons">
-				<a href="Aboutus.html"><button type="button" class="homebutton aboutus">About us</button>
-					<a href="#"><button type="button" class="homebutton googlesignin">Log in with Google</button>
-					<a href="affiliates.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>
+				<a href="Aboutus.html"><button type="button" class="homebutton aboutus">About us</button></a>
+				<button hidden type="button" id="sign-out-home" class="homebutton googlesignin">Sign-out</button>
+				<button hidden type="button" id="sign-in-home" class="homebutton googlesignin">Log in with Google</button>
+				<a href="affiliates.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>
 			</div>
 		</div>
 		<!--Link button to go straight to the recipe directory-->
@@ -81,7 +86,7 @@
 	</div>
 	<!--Bootstrap container that makes the page more reponsive-->
 	<div class="container">
-		<!--Featured recipe's heading title-->>
+		<!--Featured recipe's heading title-->
 		<div id="featured">
 			<h1 class="welcome" style="color: black; margin-top: 20px; margin-bottom: 20px;">Featured Recipes</h1>
 		</div>
@@ -140,16 +145,16 @@
 
 <script src="Javascript/mainauth.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 <script>
     // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyD-sz8xovj1JyAMhIwVHogFaDPbZtbB7HQ",
-        authDomain: "phoenixrecipestest.firebaseapp.com",
-        databaseURL: "https://phoenixrecipestest.firebaseio.com",
-        projectId: "phoenixrecipestest",
-        storageBucket: "phoenixrecipestest.appspot.com",
-        messagingSenderId: "1087554749416"
+        apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
+        authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
+        databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
+        projectId: "phoenix-recipes-98a1a",
+        storageBucket: "phoenix-recipes-98a1a.appspot.com",
+        messagingSenderId: "925704811865"
     };
     firebase.initializeApp(config);
 </script>
