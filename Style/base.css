@@ -23,6 +23,10 @@ header {
 	margin: 0 auto 0 auto; 
 	width: 95%;
 }
+#logo-name {
+	width: 50%;
+	float: left;
+}
 /* desktop version displays logo on the left */
 .logo {
 	width: 15%;
@@ -71,12 +75,41 @@ header {
 	}
 }
 /* Login with Google button for desktop version. Floats on the right in the header. */
+#user-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding-left: 10px;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+#user-container #user-pic {
+  top: 40px;
+  position: relative;
+  display: inline-block;
+  background-image: url('/images/profile_placeholder.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  border-radius: 20px;
+}
+#user-container #user-name {
+  font-size: 16px;
+  line-height: 36px;
+  padding-right: 10px;
+  padding-left: 20px;
+  position: relative;
+  top: 40px;
+  color: white;
+  font-size: 24px;
+}
 .pointer {
 	min-height: 25px;
 	font-size: 24px;
 	float: right;
 	color: white;
-} 
+}
 /* Nav bar for Desktop version */
 nav {
 	margin: 0 auto 0 auto;
@@ -142,8 +175,45 @@ nav {
 		width: 100%;
 		height: 75px;
 		color: white;
-		font-size: 0px;
+		font-size: 16px;
 	}
+	.nav-home-active {
+		-moz-box-shadow:inset 0px 0px 15px 3px #101010;
+		-webkit-box-shadow:inset 0px 0px 15px 3px #101010;
+		box-shadow:inset 0px 0px 15px 5px #101010;
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #262626), color-stop(1, #222222));
+		background:-moz-linear-gradient(top, #262626 5%, #222222 100%);
+		background:-webkit-linear-gradient(top, #262626 5%, #222222 100%);
+		background:-o-linear-gradient(top, #262626 5%, #222222 100%);
+		background:-ms-linear-gradient(top, #262626 5%, #222222 100%);
+		background:linear-gradient(to bottom, #262626 5%, #222222 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+		background-color:#101010;
+		border:1px solid #101010;
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+			font-size:15px;
+		padding:6px 13px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #540d05;
+	}
+	.nav-home-active:hover {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #262626), color-stop(1, #222222));
+		background:-moz-linear-gradient(top, #262626 5%, #222222 100%);
+		background:-webkit-linear-gradient(top, #262626 5%, #222222 100%);
+		background:-o-linear-gradient(top, #262626 5%, #222222 100%);
+		background:-ms-linear-gradient(top, #262626 5%, #222222 100%);
+		background:linear-gradient(to bottom, #262626 5%, #222222 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+		background-color:#415989;
+	}
+	.nav-home-active:active {
+		position:relative;
+		top:1px;
+	}
+	
 	/* Icons for Mobile Nav bar */
 	.glyphicon {
 		font-size: 20px;
@@ -158,6 +228,21 @@ nav {
 	} */
 }
 /* this is the fancy g that stands for google */
+.logoutBtn {
+  	box-sizing: border-box;
+	border: none;
+	line-height: 34px;
+	padding: 0 15px 0 15px;
+	white-space: nowrap;
+	border-radius: 0.2em;
+	margin: 0.2em;
+	position: relative;
+	bottom: 25px;
+	background-color: #DD4B39;
+	color: #FFF;
+	/* width: 13em;  - apply for fixed size */
+	font-size: 16px;
+}
 .loginBtn { 
   box-sizing: border-box;
   position: relative;
@@ -207,9 +292,23 @@ nav {
 		min-height: 35px;
 		font-size: 12px;
 	}
+	#user-container #user-name {
+		font-size: 20px;
+		top: 45px;
+	}
 }
 @media only screen and (min-width: 1px) and (max-width:621px) {
 	.pointer {
+		display: none;
+	}
+	#user-name {
+		display: none;
+	}
+	#logo-name {
+		width: 100%;
+		float: none;
+	}
+	#user-container #user-pic {
 		display: none;
 	}
 }
@@ -218,9 +317,8 @@ nav {
 ---------------------------------------------------*/
 /* Link leads to Recipes from the home page */
 #recipelinkdiv {
-	background-color: transparent;
 	padding-bottom:15px;
-	margin-top: -15px;
+	margin-top: 30px;
 }
 .skip-link {
 	text-decoration: none;
@@ -229,7 +327,7 @@ nav {
 }
 .skip-link:hover {
 	text-decoration: none;
-	color: blue;
+	color: #a0a0a0;
 }
 .recipelink {
 	font-size: 14px;
@@ -237,7 +335,7 @@ nav {
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
-	display: inline-block;
+	display: block;
 	background-color: transparent;
 	border: 1px solid transparent;
 }
@@ -279,12 +377,12 @@ nav {
 		position: static;
 	}
 	.welcome {
-		font-size: 24px;
-		margin-top: 15px;
-		margin-bottom: 15px;
+		font-size: 32px;
+		margin-top: 0;
+		margin-bottom: 2px;
 	}
 	#intro {
-		font-size: 13px;
+		font-size: 20px;
 		width: 90%; 
 	}
 }
@@ -293,30 +391,131 @@ nav {
 #homepagebuttons {
 	width: 90%;
 	margin: 15px auto 0 auto;
-	height: 150px;
+	height: 100px;
 	display: block;
 	position: relative; 
 	top: 15px;
-	margin-top: 15px;
 }
 .homebutton {
 	width: 30%;
 	margin-top: 15px;
 	height: 50px;
-	border-radius: 3px 3px;
-	border: 1px solid black;
-	color: white;
 }
 
 /* Colors of navigation buttons present on the home page over the image */
 .aboutus {
-	background-color: blue;
+	-moz-box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	-webkit-box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	text-decoration:none;
+	margin-top: 5px;
+}
+.aboutus:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+.aboutus:active {
+	position:relative;
+	top:1px;
 }
 .googlesignin {
-	background-color: red;
+	-moz-box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	-webkit-box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #DD4B39), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #DD4B39 5%, #963024 100%);
+	background:-webkit-linear-gradient(top, #DD4B39 5%,  #E74B37; 100%);
+	background:-o-linear-gradient(top, #DD4B39 5%, #963024 100%);
+	background:-ms-linear-gradient(top, #DD4B39 5%, #963024 100%);
+	background:linear-gradient(to bottom, #DD4B39 5%,  #963024 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #963024;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	text-decoration:none;
+	margin-top: 5px;
+}
+.googlesignin:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #963024 5%, #DD4B39 100%);
+	background:-webkit-linear-gradient(top, #963024 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #963024 5%, #DD4B39 100%);
+	background:-ms-linear-gradient(top, #963024 5%, #DD4B39 100%);
+	background:linear-gradient(to bottom, #963024 5%, #DD4B39 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+.googlesignin:active {
+	position:relative;
+	top:1px;
 }
 .apps {
-	background-color: purple;
+	-moz-box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	-webkit-box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	box-shadow:inset 2px 0px 0px -5px #54a3f7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d1661b), color-stop(1, #934813));
+	background:-moz-linear-gradient(top, #d1661b 5%, #934813 100%);
+	background:-webkit-linear-gradient(top, #d1661b 5%,  #934813; 100%);
+	background:-o-linear-gradient(top, #d1661b 5%, #934813 100%);
+	background:-ms-linear-gradient(top, #d1661b 5%, #934813 100%);
+	background:linear-gradient(to bottom, #d1661b 5%,  #934813 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #934813;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	text-decoration:none;
+	margin-top: 5px;
+}
+.apps:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #934813), color-stop(1, #d1661b));
+	background:-moz-linear-gradient(top, #934813 5%, #d1661b 100%);
+	background:-webkit-linear-gradient(top, #934813 5%, #d1661b 100%);
+	background:-o-linear-gradient(top, #934813 5%, #d1661b 100%);
+	background:-ms-linear-gradient(top, #934813 5%, #d1661b 100%);
+	background:linear-gradient(to bottom, #934813 5%, #d1661b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+.apps:active {
+	position:relative;
+	top:1px;
 }
 
 /* Positioning of navigation buttons over the image on the home page for mobile. */
@@ -324,12 +523,13 @@ nav {
 	#homepagebuttons {
 		width: 100%;
 		margin-left: 0;
-		height: 175px;
-		margin-top: 12px;
+		height: 100px;
+		margin-top: 0;
+		margin-bottom: 5px;
 	}
 	.homebutton {
 		width: 45%;
-		font-size: 10px;
+		font-size: 12px;
 		height: 40px;
 	}
 }
@@ -357,8 +557,7 @@ nav {
 	margin-bottom: 80px;
 }
 .downarrowimage {
-	width: 5%;
-	
+	width: 7%;
 }
 /*--------------------------------------------------
 	Directory

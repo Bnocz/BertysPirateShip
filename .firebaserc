@@ -1,0 +1,12 @@
+{
+  "projects": {
+<<<<<<< HEAD
+    "default": "phoenixrecipestest",
+    "phoenixtest": "phoenixrecipestest"
+  }
+}
+=======
+    "default": "phoenixrecipestest"
+  }
+}
+>>>>>>> TheSevenSeas

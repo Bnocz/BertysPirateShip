@@ -62,7 +62,10 @@ Formats recipe image size
 **/
  #foodsize {
 	 width: 100%;
+<<<<<<< HEAD
+=======
 	 height: 300px;
+>>>>>>> TheSevenSeas
  }
  /**
  Formats the arrow size
