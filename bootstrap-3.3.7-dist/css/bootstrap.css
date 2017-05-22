@@ -6765,3 +6765,13 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.panel-default>.panel-heading {
+	color: rgb(241, 203, 132);
+    background-color: rgb(188, 57, 8);
+}
+.panel-body {
+    background-color: #fdefd3;
+}
+.panel-group {
+    margin-bottom: -10px;
+}

@@ -12,6 +12,10 @@
     <!--Font of the header title-->
 	<link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
     <script href="Javascript/jquery-3.2.1.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/bootstrap/3.3.7/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!------------------------------
@@ -51,117 +55,92 @@
 ----------------------------------->
 <main>
 <div class="container">
-	<div id="titlehomepage">
-		<h1 id="nameRecipe">Name of Recipe Here</h1>
+	<div id="titleDirectory">
+		<h2 id="nameRecipe">Name of Recipe Here</h2>
 	</div>
-	
-	<!-- Div containing the 3 columns -->
-	<div id="imagesdiv">
-	<!-- Div containing column 1 (the left column) -->
-	<div id="column1">
-		<img width="30" src="left.png">
+	<div id="imageFood">
+		<img id="foodsize" src="turkey.png">
 	</div>
-	<!-- Div containing column 1 (the left column) -->
-	<div id="column2outer">
-		<!-- Div containing column 2 (the middle column) -->
-		<div id="column2mid">
-			<img id="foodsize" src="turkey.png">
-		</div>
-		<!-- Div containing column 3 (the right column) -->
-		<div id="column2side">
-			<img width="30" src="right.png">
-		</div>
+	<div id = "ratings">
+		<img id="userRating" src="images/rating.png"> &emsp;&emsp;
+		<a href="#"><button type = "button" id="share" >Share <img src = "images/google.png" id = "google"></button></a>&emsp;
+		<img id="actualRating" src="images/star.png">4.5
 	</div>
-	</div>
-
 	<div id="centerlist">
-	<h3 id="listheader">Ingredients</h3>
-		<!--PLACEHOLDER LIST
-		Needs to be replaced with recipe lists from a database
-		-->
-		<div>
-		<!--  -->
-		<table>
-		<form>
-		<tr>
-			<td>
-			<!-- Dropdown containing serving sizes 
-			NOTE: needs to have functionality to alter ingredient amounts
-			-->
-			<select name="servingsize">
-			<option value="1/4">1/4</option>
-			<option value="1/2">1/2</option>
-			<option value="1" selected>1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			</select>
-			</td>
-			<th>Serving Size</th>
-		</tr>
-		<tr>
-			<td><br></td>
-		</tr>
-		<tr>
-			<td id="servesizeFirebase"></td>
-			<td id="ingredientTable">Turkey</td>
-			<td></td>
-			<!-- Cell containing checkbox for leftovers
-			NOTE: needs to have functionality to signify waste saved to stats page
-			-->
-			<td>
-			<input type="checkbox" name="leftover" value="yes">Leftover?
-			</td>
-		</tr>
-		<tr>
-			<td id="servesizeFirebase"></td>
-			<td id="ingredientTable">Mashed Taters</td>
-			<td></td>
-			<!-- Cell containing checkbox for leftovers
-			NOTE: needs to have functionality to signify waste saved to stats page
-			-->
-			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
-		<tr>
-		</tr>
-			<td id="servesizeFirebase"></td>
-			<td id="ingredientTable">Cranberry SAAAAAAAAUCE</td>
-			<td></td>
-			<!-- Cell containing checkbox for leftovers
-			NOTE: needs to have functionality to signify the waste prevented to stats page
-			-->
-			<td><input type="checkbox" name="leftover" value="yes">Leftover?</td>
-		</tr>
-		</form>
-		</table>
-		</div>
-	<br>
-	<br>
-	<br>
-	<!-- Div containing recipe instruction 
-		NOTE: needs to have button to send/save data to stats page
-	-->
-	<div>
-	<h3 id="listheader">Instructions</h3>
-		<div>
-		<ol>
-			<li>Take the turkey</li>
-			<li>Add the taters</li>
-			<li>Liberally douse in cranberry SAAAAAAAAUCE</li>
-		</ol>
-		</div>
+	<div id = "servings">
+	Serving Size - 2 &emsp;&emsp;&emsp;&emsp;&emsp;<img src = "images/time.png" alt = "Clock image" id = "clockimg">&nbsp;30min
 	</div>
-	<br>
-	<p>Comments</p>
-	
-	</div>	
+	<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Ingredients
+		  <img src = "images/down-arrow.png" alt = "down-arrow" class = "down-arrow"></a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+			<ul class = "list"> 
+				<li>1 Mashed Potatoes </li>
+				<li>2 Cranberry Sauce </li>
+				<li>3 something </li>
+				<li>3 Mashed Potatoes </li>
+				<li>4 Cranberry Sauce </li>
+				<li>5 something </li>
+				<li>6 Mashed Potatoes </li>
+				<li>1 Cranberry Sauce </li>
+				<li>2 something </li>
+				<li>3 Mashed Potatoes </li>
+				<li>4 Cranberry Sauce </li>
+				<li>5 something </li>
+				<li>2 Mashed Potatoes </li>
+				<li>3 Cranberry Sauce </li>
+				<li>4 something </li>
+				<li>5 Mashed Potatoes </li>
+				<li>1 Cranberry Sauce </li>
+				<li>4 something </li>
+			</ul>
+		</div>
+      </div>
+    </div>
 	<br>	
 </div>
-
+ <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Instructions
+		  <img src = "images/down-arrow.png" alt = "down-arrow" class = "down-arrow"></a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body"><ol class = "ilist"> 
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+				<li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+				<li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+			
+			</ol></div>
+      </div>
+    </div>
+	</div>
 </main>
+<div id="escapenav"></div>
 <footer>
     <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
      <div class="row" id="bottomNav">
@@ -193,10 +172,7 @@
     
   var dbRef = firebase.database().ref().child('servesizeFirebase');
   dbRef.on('value', snap => ingredients.innerText = snap.val());
-  var dbRef = firebase.database().ref().child('nameRecipeDB');
-  dbRef.on('value', snap => nameRecipe.innerText = snap.val());
-  
-  
+   
 </script>
 </body>
 </html>
