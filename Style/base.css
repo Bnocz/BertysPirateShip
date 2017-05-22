@@ -23,6 +23,10 @@ header {
 	margin: 0 auto 0 auto; 
 	width: 95%;
 }
+#logo-name {
+	width: 50%;
+	float: left;
+}
 /* desktop version displays logo on the left */
 .logo {
 	width: 15%;
@@ -71,11 +75,42 @@ header {
 	}
 }
 /* Login with Google button for desktop version. Floats on the right in the header. */
+#user-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding-left: 10px;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+#user-container #user-pic {
+  top: 40px;
+  position: relative;
+  display: inline-block;
+  background-image: url('/images/profile_placeholder.png');
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  border-radius: 20px;
+}
+#user-container #user-name {
+  font-size: 16px;
+  line-height: 36px;
+  padding-right: 10px;
+  padding-left: 20px;
+  position: relative;
+  top: 40px;
+  color: white;
+  font-size: 24px;
+}
 .pointer {
 	min-height: 25px;
 	font-size: 24px;
 	float: right;
 	color: white;
+	position: relative;
+	top: 25px;
 } 
 /* Nav bar for Desktop version */
 nav {
@@ -158,6 +193,19 @@ nav {
 	} */
 }
 /* this is the fancy g that stands for google */
+.logoutBtn {
+  	box-sizing: border-box;
+	border: none;
+	line-height: 34px;
+	padding: 0 15px 0 15px;
+	white-space: nowrap;
+	border-radius: 0.2em;
+	margin: 0.2em;
+	position: relative;
+	bottom: 25px;
+	background-color: #DD4B39;
+	color: #FFF;
+}
 .loginBtn { 
   box-sizing: border-box;
   position: relative;
@@ -207,9 +255,23 @@ nav {
 		min-height: 35px;
 		font-size: 12px;
 	}
+	#user-container #user-name {
+		font-size: 20px;
+		top: 45px;
+	}
 }
 @media only screen and (min-width: 1px) and (max-width:621px) {
 	.pointer {
+		display: none;
+	}
+	#user-name {
+		display: none;
+	}
+	#logo-name {
+		width: 100%;
+		float: none;
+	}
+	#user-container #user-pic {
 		display: none;
 	}
 }

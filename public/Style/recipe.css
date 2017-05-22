@@ -1,0 +1,71 @@
+/**
+Style to create a 3 column div, to allow
+the images to layout horizontally
+**/
+.container #column1 {
+	width: 25%;
+	float: left;
+	
+ }
+ .container #column2outer {
+	width: 75%;
+	float: right;
+	margin: 0;
+	padding: 0;
+	
+ }
+ #column2outer #column2mid {
+	width: 60%;
+	float: left;
+	
+ }
+ #column2outer #column2side {
+	width: 4%;
+	float: right;
+	
+ }
+ #column2mid {
+	 text-align: center;
+	 
+ }
+ #listheader {
+	 margin: 0 auto;
+	 text-align: center;
+	 
+ }
+ /**
+ Centers the list and adds border for style
+ **/
+ #centerlist {
+	 width: 75%;
+	 margin:0 auto;
+	 text-align: left;
+	 border: 1px solid black;
+ }
+ /**
+ Formats all 3 columns width and height
+ **/
+ #imagesdiv {
+	 width: 100%;
+	 height: 370px;
+	 
+ }
+ /**
+Formats the ingredient list table
+ **/
+ #ingredientTable {
+	 width: 80%;
+	 
+ }
+/**
+Formats recipe image size
+**/
+ #foodsize {
+	 width: 100%;
+ }
+ /**
+ Formats the arrow size
+ **/
+ #arrowsize {
+	 width: 10%;
+ }

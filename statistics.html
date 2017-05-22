@@ -16,14 +16,25 @@
 <header>
     <div class="container">
         <div id="header_interior">
-            <img class="logo" src="logo.png" alt="Phoenix Recipes">
-            <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
-            <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
-            <button class="loginBtn loginBtn--google .btn-link pointer">
-                Login with Google
-            </button>
+            <!--Logo and Company Title-->
+            <div id="logo-name">
+                <img class="logo" src="logo.png" alt="Phoenix Recipes">
+                <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+                <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+            </div>
+            <!--Google login button, not finalized-->
+            <div id="user-container">
+                <div hidden id="user-pic"></div>
+                <div hidden id="user-name"></div>
+                <button hidden id="sign-out" class="logoutBtn pointer">
+                    Sign-out
+                </button>
+                <button hidden id="sign-in" class="loginBtn loginBtn--google .btn-link pointer">
+                    Login with Google
+                </button>
+            </div>
         </div>
-    <div>
+    </div>
 </header>
 <nav class="navbar">
     <div>
@@ -64,22 +75,23 @@
  </div>
 </footer>
 
+<script src="/__/firebase/3.8.0/firebase.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+<script src="Javascript/auth.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
-    authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
-    databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
-    projectId: "phoenix-recipes-98a1a",
-    storageBucket: "phoenix-recipes-98a1a.appspot.com",
-    messagingSenderId: "925704811865"
-  };
-  firebase.initializeApp(config);
-  
-  
-  
-  
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
+        authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
+        databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
+        projectId: "phoenix-recipes-98a1a",
+        storageBucket: "phoenix-recipes-98a1a.appspot.com",
+        messagingSenderId: "925704811865"
+    };
+    firebase.initializeApp(config);
 </script>
 </body>
 </html>
