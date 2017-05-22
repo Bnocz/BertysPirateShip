@@ -47,7 +47,11 @@
 }
 div#recipe {
 	width: 50%;
+<<<<<<< HEAD
 	height: 50%;
+=======
+	height: 300px;
+>>>>>>> TheSevenSeas
 }
 div#recipe:nth-child(even) {
 	float: left;
@@ -71,7 +75,11 @@ div#recipe:nth-child(odd) {
 	margin-top: 0;
 	margin-bottom: 0;
 	width: 100%;
+<<<<<<< HEAD
 	height: 100%;
+=======
+	height: 200px;
+>>>>>>> TheSevenSeas
 	display: inline-block;
 }
 .dropbtn {
@@ -131,7 +139,11 @@ div#recipe:nth-child(odd) {
 	width: 100%;
 }
 #food {
+<<<<<<< HEAD
 	height: 100%;
+=======
+	height: 200px;
+>>>>>>> TheSevenSeas
 	width: 100%;
 }
 
@@ -146,7 +158,11 @@ div#recipe:nth-child(odd) {
 	display: inline-block;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	width: 20%;
+<<<<<<< HEAD
 	height: 250px;
+=======
+	height: 200px;
+>>>>>>> TheSevenSeas
 }
 a #recipe {
 	text-decoration: none;

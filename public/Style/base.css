@@ -1,0 +1,835 @@
+/*-------------------------------------------------
+    Header, Nav and Footer (For all Webpages)
+---------------------------------------------------*/
+@font-face {
+	font-family: 'Eyes';
+	src: url(Fonts/Eyes.ttf); /* downloaded a url from Google Fonts */
+}
+body {
+	margin: 0 auto 0 auto;
+	width: 100%; 
+	background: #f6aa1c; /* For browsers that do not support gradients */
+    background: linear-gradient(#f6aa1c, white); /* Standard syntax */
+} 
+
+/* Header for desktop version */
+header {
+	width: 100%;
+	background-color: #941b0c; /* Red-brown color for main part of the header */
+	top: 0;
+	border-top: 10px solid #220901; /* Black border at top */
+} 
+#header_interior {
+	margin: 0 auto 0 auto; 
+	width: 95%;
+}
+#logo-name {
+	width: 50%;
+	float: left;
+}
+/* desktop version displays logo on the left */
+.logo {
+	width: 15%;
+	min-width: 110px;
+	min-height: 110px;
+	float: left;
+	clear: both;
+}
+.logo_center {
+	display: none;
+}
+/* title for header--displays app name */
+.title {
+	font-family: 'Eyes', 'Exo', sans-serif;
+	src: url(Fonts/Eyes.ttf);
+	font-size: 3.4vw;
+	min-width: 110px;
+	min-height: 110px;
+	overflow: auto;
+	display: inline;
+	position: relative;
+	top: 20px;
+	right: 5px;
+	color: #f6aa1c;
+} 
+
+/* Mobile Header */
+@media only screen and (min-width: 1px) and (max-width: 621px) {
+	.logo {
+		display: none;
+	}
+	/* mobile version displays a different version of the logo and in the center */
+	.logo_center {
+		display: block;
+		margin: 0 auto 0 auto;
+		width: 25%;
+		min-width: 110px;
+		min-height: 110px;
+	}
+	/* app name is not displayed on mobile as it is paired with the logo */
+	.title {
+		display: none;
+	}
+}
+/* Login with Google button for desktop version. Floats on the right in the header. */
+#user-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding-left: 10px;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+#user-container #user-pic {
+  top: 40px;
+  position: relative;
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  border-radius: 20px;
+}
+#user-container #user-name {
+  font-size: 16px;
+  line-height: 36px;
+  padding-right: 10px;
+  padding-left: 20px;
+  position: relative;
+  top: 40px;
+  color: white;
+  font-size: 24px;
+}
+.pointer {
+	min-height: 25px;
+	font-size: 24px;
+	color: white;
+	float: right;
+	position: relative;
+	top: 35px;
+}
+/* Nav bar for Desktop version */
+nav {
+	margin: 0 auto 0 auto;
+	background-color: #bc3908;
+	width: 100%;
+}
+#nav_interior {
+	margin: 0 auto 0 auto;
+	width: 80%;
+}
+/* class for recoloring the buttons on the nav bar in desktop version */
+.dat_class {
+	color: #f2f1ea;
+}
+.mobile-nav {
+	text-decoration: none;
+	list-style: none;
+	padding-left: 0;
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	z-index: 1;
+}
+.nav-home {
+	padding-left: 0;
+	width: 100%;
+}
+.nav-button {
+	background-color: transparent;
+	border-color: transparent;
+	width: 100%;
+	height: 100px;
+	color: white;
+}
+.row {
+	margin-right: 15px;
+}
+.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
+	display: none;
+}
+
+/* Mobile Nav Bar */
+@media only screen and (min-width: 1px) and (max-width:779px) {
+	#nav_interior {
+		display: none;
+		background-color: #0092b2;
+	}
+	.navbar-nav, .nav {
+		display: none;
+	}
+	.navbar {
+		position: relative;
+		min-height: 100px;
+		margin-bottom: 20px;
+		border: 1px solid transparent;
+	}
+	.nav-button {
+		background-color: transparent;
+		border-color: transparent;
+		width: 100%;
+		height: 75px;
+		color: white;
+		font-size: 0px;
+	}
+	/* Icons for Mobile Nav bar */
+	.glyphicon {
+		font-size: 20px;
+	}
+	.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
+		display: block;
+	}
+	
+	/* Mobile version of header top border looks bad so I deleted it.
+	header {
+		border-top: 5px solid #E92100;
+	} */
+}
+/* this is the fancy g that stands for google */
+.logoutBtn {
+  	box-sizing: border-box;
+	border: none;
+	line-height: 34px;
+	padding: 0 15px 0 15px;
+	white-space: nowrap;
+	border-radius: 0.2em;
+	margin: 0.2em;
+	position: relative;
+	bottom: 25px;
+	background-color: #DD4B39;
+	color: #FFF;
+}
+.loginBtn { 
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+/* log in with google button */
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+@media only screen and (min-width: 621px) and (max-width:1000px) {
+	.pointer, .loginBtn {
+		min-height: 35px;
+		font-size: 12px;
+		top: 40px;
+	}
+	#user-container #user-name {
+		font-size: 20px;
+		top: 45px;
+	}
+}
+@media only screen and (min-width: 1px) and (max-width:621px) {
+	.pointer {
+		display: none;
+	}
+	#user-name {
+		display: none;
+	}
+	#logo-name {
+		width: 100%;
+		float: none;
+	}
+	#user-container #user-pic {
+		display: none;
+	}
+}
+/*--------------------------------------------------
+	Homepage
+---------------------------------------------------*/
+/* Link leads to Recipes from the home page */
+#recipelinkdiv {
+	background-color: transparent;
+	padding-bottom:15px;
+	margin-top: -15px;
+}
+.skip-link {
+	text-decoration: none;
+	font-size: 14px;
+	color: white;
+}
+.skip-link:hover {
+	text-decoration: none;
+	color: blue;
+}
+.recipelink {
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	display: inline-block;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+/* Featured Recipes section of the home page */
+#center-index {
+	text-align: center;
+}
+#intro p{
+	color: black;
+}
+#titlehomepage {
+	text-align: center;
+}
+
+/* White text that overlays on the image on home page */
+.welcome {
+	font-size: 50px;
+	margin-top: 0;
+	margin-bottom: 50px;
+	color: white;
+}
+#introcontent {
+	width: 80%;
+	margin: 0 auto 0 auto;
+	color: white;
+}
+#intro {
+	text-align: center;
+	margin-top: -50px;
+	color: white;
+}
+
+/* White text that overlays on the image on home page but for mobile */
+@media only screen and (min-width: 1px) and (max-width:669px) {
+	#intro {
+		float: none;
+		margin: 0 auto 0 auto;
+		position: static;
+	}
+	.welcome {
+		font-size: 24px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	#intro {
+		font-size: 13px;
+		width: 90%; 
+	}
+}
+
+/* Positioning of the havigation buttons that are overlayed on the image on the home page for desktop. */
+#homepagebuttons {
+	width: 90%;
+	margin: 15px auto 0 auto;
+	height: 150px;
+	display: block;
+	position: relative; 
+	top: 15px;
+	margin-top: 15px;
+}
+.homebutton {
+	width: 30%;
+	margin-top: 15px;
+	height: 50px;
+	border-radius: 3px 3px;
+	border: 1px solid black;
+	color: white;
+}
+
+/* Colors of navigation buttons present on the home page over the image */
+.aboutus {
+	background-color: blue;
+}
+.googlesignin {
+	background-color: red;
+}
+.apps {
+	background-color: purple;
+}
+
+/* Positioning of navigation buttons over the image on the home page for mobile. */
+@media only screen and (min-width: 1px) and (max-width:669px) {
+	#homepagebuttons {
+		width: 100%;
+		margin-left: 0;
+		height: 175px;
+		margin-top: 12px;
+	}
+	.homebutton {
+		width: 45%;
+		font-size: 10px;
+		height: 40px;
+	}
+}
+@media only screen and (min-width: 670px) and (max-width:2000px) {
+	.recipelink {
+		margin-top: 5px;
+	}
+}
+.featuredtitle {
+	text-align: center;
+}
+.background-color {
+	background-color: black;
+	color: yellow;
+}
+/* home page image */
+#background-image-home {
+	background-image: url("../images/food-03.png");
+	display: block;
+	background-size: cover;
+	padding-top: 40px;
+	margin-top: -20px;
+}
+#escapenav {
+	margin-bottom: 80px;
+}
+.downarrowimage {
+	width: 5%;
+	
+}
+/*--------------------------------------------------
+	Directory
+---------------------------------------------------*/
+#directoryfilter {
+	width: 25%;
+	position: fixed;
+}
+#recipesdirectory {
+	width: 75%;
+	float: right;
+}
+#filterbackground {
+	background-color: #2DD9FF;
+	width: 100%;
+}
+#filtertitle {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+.filterbutton {
+	width: 100%;
+	height: 60px;
+}
+.recipe-image-3 {
+	width: 45%;
+
+}
+.recipe-image-text {
+	position: relative;
+}
+.bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+.recipe_list {
+	width: 100%;
+}
+#filter {
+	float: left;
+	width: 20%;
+}
+#filter-background {
+	background-color: purple;
+	margin-top: -20px;
+}
+.filter-title {
+	text-align: center;
+}
+.filter-button {
+	width: 100%;
+	margin-top: -10px;
+	height: 100px;
+}
+
+/* Images of the buttons for the Featured Recipes directory */
+#food {
+	width: 100%;
+}
+.border-images {
+	border: 1px solid black;
+}
+.nameRecipe {
+	font-size: 1.2em;
+}
+.recipe {
+	border: 1px solid black;
+	width: 25%;
+	display: inline-block;
+	margin-left: -5px;
+}
+
+/* Text for buttons for the Featured Recipes directory */
+a .recipe {
+	text-decoration: none;
+}
+.recipe a:hover {
+	text-decoration:none;
+	color: red;
+}
+
+/* Represents star rating on recipes */
+.star {
+	height: 10px;
+	width: 10px;
+}
+/*-------------------------------------------------
+    Settings brevs
+---------------------------------------------------*/
+.sidebarbuttons {
+	width: 20%;
+	background-color: #f6aa1c;
+	float:left;
+}
+#burritobutton1 {
+	height:210px;
+	width:100%;
+}
+#burritobutton2 {
+	height:210px;
+	width:100%;
+}
+#burritobutton3 {
+	height:210px;
+	width:100%;
+}
+.mainsettings {
+	background-color: #f6aa1c;
+	height: 650px;
+}
+.searchsettings {
+	text-align:center;
+}
+.searchsettings input {
+	width:20px;
+	height:20px;
+}
+.searchsettingsnone {
+	display:none;
+}
+.recentrecipes {
+color:white;
+}
+.test{
+	color:blue;
+}
+.recentrecipes button {
+	width: 250px;
+	margin-left:60px;
+	display: block;
+}
+.recentrecipes button img {
+	height:150px;
+	width: 180px;
+}
+
+.recentecipesimages {
+margin-left: 400px;
+}
+
+.needhelp {
+	text-align: center;
+	font-size: 4em;
+}
+
+@media only screen and (min-width: 1px) and (max-width:621px) {
+	.sidebarbuttons {
+		width:100%;
+		height:650px;
+	}
+	#burritobutton1 {
+		height: 190px;
+		width: 100%;
+}
+	#burritobutton2 {
+		height: 190px;
+		width: 100%;
+}
+	#burritobutton3 {
+		height: 190px;
+		width: 100%;
+}
+	#burritobutton4 {
+		height: 130px;
+		width: 100%;
+		position:relative;
+		top:450px;
+}
+	.searchsettings {
+		position: relative;
+		bottom:600px;
+	}
+	.searchsettings input {
+		width:30px;
+		height: 30px;
+		position: relative;
+	}
+
+.recentrecipes {
+	position: relative;
+	bottom:650px;
+}
+.recentrecipes button {
+	height:100px;
+	width:100px;
+	margin-top: 25px;
+	position: relative;
+	right: 250px;
+}
+.recentrecipes button img {
+	height:95px;
+	width:95px;
+}
+.needhelp {
+	font-size:2em;
+	position: relative;
+	bottom: 600px;
+}
+}
+/*-------------------------------------------------
+    affiliates
+---------------------------------------------------*/
+.checkout {
+	text-align: center;
+}
+.affiliatename {
+	margin: 30px auto 30px auto;
+	text-align: center;
+}
+#affiliatetitle {
+	width: 100%;
+	text-align: center;
+	margin: 30px auto 15px auto;
+}
+#grocerybuddy {
+	width: 30%;
+	float: left;
+	margin-right: 10px;
+}
+#fridgemates {
+	width: 20%;
+	float: left;
+	margin-right: 10px;
+}
+#greenlist {
+	width: 20%;
+	float: left;
+	margin-right: 10px;
+}
+#myfridge {
+	width: 35%;
+	float: left;
+	margin-right: 10px;
+}
+#myvirtualfridge {
+	width: 20%;
+	float: left;
+	margin-right: 10px;
+}
+.appdiscription {
+	overflow: auto;
+	display: inline;
+	clear: both;
+	padding-top: 30px;
+}
+@media only screen and (min-width: 376px) and (max-width:768px) {
+	.checkout {
+		font-size: 32px;
+		margin: 30px auto 15px auto;
+		text-align: center;
+	}
+	.affiliatename {
+		font-size: 30px;
+	}
+	#grocerybuddy {
+		width: 75%;
+		display: block;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	#fridgemates {
+		width: 50%;
+		display: block;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	#greenlist {
+		width: 50%;
+		display: block;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	#myfridge {
+		width: 100%;
+		display: block;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	#myvirtualfridge {
+		width: 75%;
+		display: block;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	.appdiscription {
+		font-size: 20px;
+		display: block;
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 1px) and (max-width:375px) {
+	.checkout {
+		font-size: 26px;
+		margin: 30px auto 15px auto;
+		text-align: center;
+	}
+	.affiliatename {
+		font-size: 24px;
+	}
+	#grocerybuddy {
+		width: 60%;
+		display: block;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	#fridgemates {
+		width: 35%;
+		margin: 0 auto 0 auto;
+		float: none;
+		display: block;
+	}
+	#greenlist {
+		width: 35%;
+		margin: 0 auto 0 auto;
+		display: block;
+		float: none;
+	}
+	#myfridge {
+		width: 85%;
+		margin: 0 auto 0 auto;
+		display: block;
+		float: none;
+	}
+	#myvirtualfridge {
+		width: 60%;
+		float: none;
+		margin: 0 auto 0 auto;
+		display: block;
+	}
+	.appdiscription {
+		font-size: 16px;
+		display: block;
+		text-align: center;
+	}
+}
+/*-------------------------------------------------
+    about us
+---------------------------------------------------*/
+#aboutusmission {
+	width: 70%;
+	margin: 30px auto 50px auto;
+}
+.missionstatement {
+	text-align: center;
+}
+#desktoptable {
+	margin: 30px auto 0 auto;
+	width: 75%;
+}
+#mobiletable {
+	display: none;
+}
+.developerportrait {
+	width: 100%;
+}
+.developername {
+	text-align: center;
+	margin-top: 50px;
+}
+.developerdesciption {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+.developerlikes {
+	text-align: center;
+	margin-top: 20px;
+}
+.likeslist {
+	list-style-type: square;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media only screen and (min-width: 376px) and (max-width:768px) {
+	#desktoptable {
+		display: none;
+	}
+	#mobiletable {
+		display: block;
+	}
+	.developerportrait {
+		width: 50%;
+		margin: 0 auto 0 auto;
+		display: table;
+	}
+	.developerdesciption {
+		font-size: 12px;
+	}
+	.missionstatement {
+		font-size: 12px;
+	}
+}
+@media only screen and (min-width: 1px) and (max-width:375px) {
+	#desktoptable {
+		display: none;
+	}
+	#mobiletable {
+		display: block;
+	}
+	.developerportrait {
+		width: 40%;
+		margin: 0 auto 0 auto;
+		display: table;
+	}
+	.developerdesciption {
+		font-size: 12px;
+	}
+	.missionstatement {
+		font-size: 12px;
+	}
+}
