@@ -65,23 +65,23 @@
 	<div id="background-image-home">
 		<!--Div for the Welcome heading, change when the user is logged in-->
 		<div id="titlehomepage">
-			<h1 hidden class="welcome" id="welcome-home">Welcome to Phoenix Recipes</h1>
+			<h1 hidden class="welcome" id="welcome-home">Welcome to Phoenix Recipe</h1>
 			<h1 hidden class="welcome" id="welcome-user">Welcome <span id="user-name2"></span>, to Phoenix Recipes</h1>
 			<h3 id="intro">"Let your food be reborn"</h3>
 		</div>
 		<!--Div for buttons, about us link, login with google button, Affiliated apps link-->
 		<div id="introcontent">
 			<div id="homepagebuttons">
-				<a href="Aboutus.html"><button type="button" class="homebutton aboutus">About us</button></a>
+				<a href="Aboutus.html"><button type="button" class="homebutton aboutus">About us</button>
+				<a href="affiliates.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>	
 				<button hidden type="button" id="sign-out-home" class="homebutton googlesignin">Sign-out</button>
 				<button hidden type="button" id="sign-in-home" class="homebutton googlesignin">Log in with Google</button>
-				<a href="affiliates.html"><button type="button" class="homebutton apps">Affiliated Apps</button></a>
 			</div>
 		</div>
 		<!--Link button to go straight to the recipe directory-->
 		<div id="recipelinkdiv">
 			<a class="skip-link" href="directory.html"><button type="button" class="recipelink">Click Here to go Straight to Our Large Assortment of Recipes<br>or check below to sign in or see some of our favorites</button></a><br>
-			<img src="images/down-arrow.png" alt="down-arrow" class="downarrowimage">
+			<img src="images/down-arrow.png" alt="down-arrow" class="downarrowimage" />
 		</div>
 	</div>
 	<!--Bootstrap container that makes the page more reponsive-->
@@ -132,31 +132,30 @@
 <!--Not footer, instead is the bottom navbar for the mobile-->
 <footer>
 	<div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
-		<div class="row" id="bottomNav">
-			<div class="col-xs-3 text-center nav-home"><a href="index.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></a></div>
-			<div class="col-xs-3 text-center"><a href="directory.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></a></div>
-			<div class="col-xs-3 text-center"><a href="statistics.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-stats"></i><br>Report</button></a></div>
-			<div class="col-xs-3 text-center"><a href="settings.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-user"></i><br>Account</button></a></div>
+		<div class="navbottomrow" id="bottomNav">
+			<div class="col-xs-6 text-center nav-home"><a href="index3.html"><button type="button" class="nav-button nav-home-active"><i class="glyphicon glyphicon-home"></i><br>Home</button></a></div>
+			<div class="col-xs-6 text-center nav-recipes"><a href="directory.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></a></div>
 		</div>
 	</div>
 </footer>
 <script src="/__/firebase/3.8.0/firebase.js"></script>
 <script src="/__/firebase/init.js"></script>
 
-<script src="Javascript/mainauth.js"></script>
+<script src="mainauth.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
-        authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
-        databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
-        projectId: "phoenix-recipes-98a1a",
-        storageBucket: "phoenix-recipes-98a1a.appspot.com",
-        messagingSenderId: "925704811865"
-    };
-    firebase.initializeApp(config);
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCsIga14CsVkZ1Ciz6sedzBkHFHd5H-_vg",
+    authDomain: "phoenix-recipes-98a1a.firebaseapp.com",
+    databaseURL: "https://phoenix-recipes-98a1a.firebaseio.com",
+    projectId: "phoenix-recipes-98a1a",
+    storageBucket: "phoenix-recipes-98a1a.appspot.com",
+    messagingSenderId: "925704811865"
+  };
+  firebase.initializeApp(config);
 </script>
 </body>
 </html>
