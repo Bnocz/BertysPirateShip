@@ -109,6 +109,8 @@ header {
 	font-size: 24px;
 	float: right;
 	color: white;
+	position: relative;
+	top: 25px;
 }
 /* Nav bar for Desktop version */
 nav {
@@ -221,11 +223,6 @@ nav {
 	.navbar-fixed-bottom, .navbar-inverse, .col-xs-12 {
 		display: block;
 	}
-	
-	/* Mobile version of header top border looks bad so I deleted it.
-	header {
-		border-top: 5px solid #E92100;
-	} */
 }
 /* this is the fancy g that stands for google */
 .logoutBtn {
@@ -357,6 +354,8 @@ nav {
 	margin-top: 0;
 	margin-bottom: 50px;
 	color: white;
+	margin-left: auto;
+	margin-right: auto;
 }
 #introcontent {
 	width: 80%;
@@ -380,10 +379,15 @@ nav {
 		font-size: 32px;
 		margin-top: 0;
 		margin-bottom: 2px;
+		width: 90%;
+		text-align: center;
 	}
 	#intro {
 		font-size: 20px;
 		width: 90%; 
+	}
+	.recipelink {
+		font-size: 12px;
 	}
 }
 
@@ -519,7 +523,7 @@ nav {
 }
 
 /* Positioning of navigation buttons over the image on the home page for mobile. */
-@media only screen and (min-width: 1px) and (max-width:669px) {
+@media only screen and (min-width: 1px) and (max-width:779px) {
 	#homepagebuttons {
 		width: 100%;
 		margin-left: 0;
