@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Title of the page-->
+    <title>Food for you</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../Style/base.css" rel="stylesheet">
+    <link href="../Style/recipe.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="jquery-bar-rating/dist/themes/fontawesome-stars.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!--Link to response Bootstrap, used for desktop to mobile-->
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <!--Font of the header title-->
+    <link href="https://fonts.googleapis.com/css?family=Exo:600i" rel="stylesheet">
+    <script href="../Javascript/jquery-3.2.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script >
+        window.___gcfg = {
+            lang: 'en-US',
+            parsetags: 'onload'
+        };
+    </script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+	<div id="fb-root"></div>
+	<script>
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+</head>
+<body>
+<!------------------------------
+	Header of all the webpages
+-------------------------------->
+<header>
+    <div class="container">
+        <div id="header_interior">
+            <!--Logo and Company Title-->
+            <div id="logo-name">
+                <img class="logo" src="logo.png" alt="Phoenix Recipes">
+                <p class="title">Phoenix<br>&nbsp;&nbsp;&nbsp; Recipes</p>
+                <img class="logo_center" src="logo_2.png" alt="Phoenix Recipes">
+            </div>
+            <!--Google login button, not finalized-->
+            <div id="user-container">
+                <div hidden id="user-pic"></div>
+                <div hidden id="user-name"></div>
+                <button hidden id="sign-out" class="logoutBtn pointer">
+                    Sign-out
+                </button>
+                <button hidden id="sign-in" class="loginBtn loginBtn--google .btn-link pointer">
+                    Login with Google
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<!----------------------------------
+	Navbar for the Desktop version
+----------------------------------->
+<nav class="navbar">
+    <div>
+        <div id="nav_interior">
+            <ul class="navbar-nav nav">
+                <li class="active"><a href="index.html" class="dat_class">Home</a></li>
+                <li><a href="directory.html" class="dat_class">Recipes</a></li>
+                <li><a href=".html" class="dat_class">Affiliated Apps</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!----------------------------------
+	Main content of the recipe pages
+----------------------------------->
+<main>
+    <div class="container">
+        <div id="titleDirectory">
+            <h2 id="nameRecipe">Rice Pudding</h2>
+        </div>
+        <div id="foodImage">
+            <img id="foodsize" src="../images/eggsnham.jpg">
+			<div class="reciperating1">
+				<img id="actualRating" src="../images/goldstar.png"><span id="actualRating2"></span>
+			</div>
+        </div>
+        <div id="userExperience">
+            <div id = "ratings">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="raterecipes" data-toggle="modal" data-target="#myModal"><p>Rate<p></button>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="model-header spacing-model-heading">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Rate Our Recipe</h4>
+                            </div>
+                            <div id = "userRate" class="stars stars-example-fontawesome model-body spacing-model-body">
+                                <select id="userRating" class="rating" name="rating" autocomplete="off">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <button id="submitRating" class="submitRating aboutus">Submit Rating</button>
+                            </div>
+                            <div class="modal-footer spacing-model">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id = "shareGoogle">
+                <p id="wanttoshare">Share:</p>
+				<a href="https://plus.google.com/share?url=https://firebase.google.com/docs/hosting/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <img src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+"/></a>
+				<div  id="facebookbutton" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> 
+            </div>
+        </div>
+    </div>
+    <div id="centerlist">
+        <div id = "servings">
+            <p><span class="servingmargin">Serving Size - 2</span><span class="clock"><img src = "../images/time.png" alt = "Clock image" id = "clockimg">&nbsp;30min</span></p>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Ingredients
+                        <img src = "../images/down-arrow.png" alt = "down-arrow" class = "down-arrow"></a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <ul class = "list">
+                            <li>1 Mashed Potatoes </li>
+                            <li>2 Cranberry Sauce </li>
+                            <li>3 something </li>
+                            <li>3 Mashed Potatoes </li>
+                            <li>4 Cranberry Sauce </li>
+                            <li>5 something </li>
+                            <li>6 Mashed Potatoes </li>
+                            <li>1 Cranberry Sauce </li>
+                            <li>2 something </li>
+                            <li>3 Mashed Potatoes </li>
+                            <li>4 Cranberry Sauce </li>
+                            <li>5 something </li>
+                            <li>2 Mashed Potatoes </li>
+                            <li>3 Cranberry Sauce </li>
+                            <li>4 something </li>
+                            <li>5 Mashed Potatoes </li>
+                            <li>1 Cranberry Sauce </li>
+                            <li>4 something </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Instructions
+                        <img src = "../images/down-arrow.png" alt = "down-arrow" class = "down-arrow"></a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body"><ol class = "ilist">
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position: </li>
+                    <li>There is also a problem with IE8 and earlier, when using position. If a container element has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration when using position:</li>
+                    <li> There is also a problem with IE8 and earlier, when using position. If a container element  has a specified width, and the !DOCTYPE declaration is missing, IE8 and earlier versions will add a 17px margin on the right side. This seems to be space reserved for a scrollbar. So, always set the !DOCTYPE declaration wh...
+                    </li>
+                </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="escapenav"></div>
+</main>
+<!--Not footer, instead is the bottom navbar for the mobile-->
+<footer>
+    <div class="col-xs-12 navbar-inverse navbar-fixed-bottom">
+        <div class="navbottomrow" id="bottomNav">
+            <div class="col-xs-6 text-center nav-home"><a href="index3.html"><button type="button" class="nav-button"><i class="glyphicon glyphicon-home"></i><br>Home</button></a></div>
+            <div class="col-xs-6 text-center nav-recipes"><a href="directory.html"><button type="button" class="nav-button nav-home-active"><i class="glyphicon glyphicon-cutlery"></i><br>Recipes</button></a></div>
+        </div>
+    </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD-sz8xovj1JyAMhIwVHogFaDPbZtbB7HQ",
+        authDomain: "phoenixrecipestest.firebaseapp.com",
+        databaseURL: "https://phoenixrecipestest.firebaseio.com",
+        projectId: "phoenixrecipestest",
+        storageBucket: "phoenixrecipestest.appspot.com",
+        messagingSenderId: "1087554749416"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery-bar-rating/examples/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<script src="jquery-bar-rating/jquery.barrating.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#userRating').barrating({
+            theme: 'fontawesome-stars'
+        });
+    });
+</script>
+<script src="../Javascript/rating.js"></script>
+</body>
+</html>
